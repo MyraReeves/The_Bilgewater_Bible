@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom'
+import Greeting from './PirateAPI'
 
 function Homepage() {
     const navigate = useNavigate()
@@ -6,6 +7,7 @@ function Homepage() {
   
     return (
         <main>
+            <Greeting />
             <div className='trailers'>
                 <p className='homepagePreviews'>Season 1 Trailer</p>
                 <iframe width="660" height="315" src="https://www.youtube.com/embed/rT2Y5jjBNpQ?si=e50p1R5prTEpyVgE" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
