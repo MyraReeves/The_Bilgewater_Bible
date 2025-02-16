@@ -1,6 +1,7 @@
 import { Routes, Route, Link } from 'react-router-dom'
 
 import Homepage from './Homepage'
+import CastAPI from './CastAPI'
 import CharacterIndex from './CharacterList'
 import TVMazeAPI from './TVMazeAPI'
 
@@ -8,6 +9,10 @@ function RoutePaths() {
 
     const Home = () => {
       return <Homepage/>
+    }
+
+    const Cast = () => {
+        return <CastAPI/>
     }
 
     const Characters = () => {
@@ -21,9 +26,10 @@ function RoutePaths() {
 
     return (
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/characters' element={<Characters />} />
-          <Route path='/stats' element={<Stats />} />
+          <Route path='/' element={ <Home/> } />
+          <Route path='/cast' element={ <Cast/> } />
+          <Route path='/characters' element={ <Characters/> } />
+          <Route path='/stats' element={ <Stats/> } />
         </Routes>
     )
 }
