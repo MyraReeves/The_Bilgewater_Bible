@@ -37,3 +37,22 @@ main {
   font-size: 20pt;
   margin-top: 0;
 }
+
+.show-stats {
+  margin-top: 70px;
+  color: lightgray;
+}
+
+.show-stats p {
+  margin-bottom: 30px;
+}
+
+.show-stats img {
+  border: solid rgb(231, 155, 2) 1px;
+  float: left;
+  margin-left: 20px;
+}
+
+.show-stats td {
+  padding: 3px 15px;
+}
