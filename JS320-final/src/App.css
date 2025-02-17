@@ -18,6 +18,43 @@ main {
   margin-top: 150px;
 }
 
+main h1 {
+  font-family: "Pirata One", serif;
+  text-align: center;
+  margin-top: 0;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+/*_______________________________________
+*********************
+* API data handling *
+*********************
+*/
+.error, .loading {
+  position: absolute;
+  text-align: center;
+  margin: auto;
+  width: 100%;
+}
+
+.error {
+  font-size: 16pt;
+  color: orangered;
+}
+
+.loading {
+  font-size: 30pt;
+}
+
+
+/*_______________________________________
+************
+* HOMEPAGE *
+************
+*/
 .greeting {
   font-family: "Caveat", serif;
   font-size: 25pt;
@@ -38,6 +75,12 @@ main {
   margin-top: 0;
 }
 
+
+/*_______________________________________
+**************
+* STATS PAGE *
+**************
+*/
 .show-stats {
   margin-top: 70px;
   color: lightgray;
@@ -71,18 +114,31 @@ main {
   color:  #996515 ;
 }
 
-.error, .loading {
-  position: absolute;
+
+/* _______________________________________
+*************
+* CAST PAGE *
+*************
+ */
+.cast-list {
+  color: #996515;
+  margin: 30px;
   text-align: center;
-  margin: auto;
-  width: 100%;
+  display: inline-block;
 }
 
-.error {
-  font-size: 16pt;
-  color: orangered;
+.cast-list p, .cast-list h2 {
+  margin: 0;
 }
 
-.loading {
-  font-size: 30pt;
+.cast-list h2 {
+  font-weight: bold;
+  background: linear-gradient(to top, red, yellow);
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+}
+
+.cast-list .info {
+  color: #e9ad53;
 }
