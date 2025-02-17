@@ -56,3 +56,19 @@ main {
 .show-stats td {
   padding: 3px 15px;
 }
+
+.error, .loading {
+  position: absolute;
+  text-align: center;
+  margin: auto;
+  width: 100%;
+}
+
+.error {
+  font-size: 16pt;
+  color: orangered;
+}
+
+.loading {
+  font-size: 30pt;
+}
