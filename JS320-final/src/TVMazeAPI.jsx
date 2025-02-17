@@ -14,18 +14,18 @@ function TVMazeAPI() {
             })
 
             .catch( error => {
-                console.log('The following error occured while fetching data: \n', error);
+                console.log('%cThe following error occured when attempting to fetch data from the API: \n', 'color: red; font-weight: bold; font-size: larger', error);
                 setHasError(true);
             });
         }, []);
 
 
     if (hasError) {
-        return <div className="error">An error occurred while fetching the information.  Sorry!  Please check the console for further details and try again.</div>;
+        return <div className="error">⛔ An error occurred while fetching the information.  Sorry! ⛔ <br/>Please check the console for further details.</div>;
     }
 
     if (object === null) {
-        return <div>Loading information...</div>;
+        return <div className="loading">Loading information...</div>;
     }
 
   return (
