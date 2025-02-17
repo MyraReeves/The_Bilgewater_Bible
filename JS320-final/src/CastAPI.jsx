@@ -1,4 +1,5 @@
-// This file maps an array of objects given by the API, to generate
+// This file maps an array of objects given by the API, in order to generate a visual list on the screen of each actor's photo, name, birthdate, and who they portrayed on the show.
+
 
 import { useEffect, useState } from "react"
 
@@ -47,11 +48,27 @@ function CastAPI() {
         return <div className="loading">Loading information...</div>;
     }
 
-    // arrayOfcastMembers.sort();
+
+    // Sort the array in alphabetical order of the actor names:
+    arrayOfcastMembers.sort(
+        function(object1, object2) {
+            if (object1.person.name < object2.person.name) {
+                return -1;
+            }
+            if (object1.person.name > object2.person.name) {
+                return 1;
+            }
+            else {
+                return 0;
+            }
+        }
+    );
+
 
   return (
     <main>
         <h1>☠️ <span className="underline">Cast Members</span> ☠️</h1>
+        <div className="subheading">(In alphabetical order of their first names)</div>
         {arrayOfcastMembers.map( (eachCastMember, index) => (
             <div key={index} className="cast-list">
                 <h2> {eachCastMember.person.name} </h2>
