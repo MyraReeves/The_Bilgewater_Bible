@@ -48,13 +48,27 @@ main {
 }
 
 .show-stats img {
-  border: solid rgb(231, 155, 2) 1px;
+  border: solid #805311 1px;
+  box-shadow: 2px 2px 40px 0.5px #996415b4;
   float: left;
-  margin-left: 20px;
+  margin: 0 25px 0 30px;
 }
 
 .show-stats td {
   padding: 3px 15px;
+}
+
+.additional-links {
+  margin: 150px 0 0 30px;
+}
+
+.additional-links p, .additional-links h4{
+  margin: 0;
+}
+
+.additional-links h4 {
+  text-decoration: underline;
+  color:  #996515 ;
 }
 
 .error, .loading {
