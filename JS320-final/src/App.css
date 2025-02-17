@@ -2,6 +2,11 @@ body {
   background-color: black;
 }
 
+/* 
+**********
+* HEADER *
+**********
+*/
 header, main {
   background-color: black;
   color: whitesmoke;
@@ -14,6 +19,55 @@ header {
   text-align: center;
 }
 
+.dropdown-menu {
+  float: right;
+  margin-right: 50px;
+  color: lightgray;
+  font-family: "Pirata One", serif;
+}
+
+.dropdown-menu:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-button {
+  background-color: black;
+  color: lightgray;
+  font-size: 18pt;
+  border: none;
+  padding-top: 3px;
+}
+
+.dropdown-button:hover {
+  border: none;
+}
+
+.dropdown-content {
+  margin: 0 15px 0 0;
+  list-style: none;
+  text-align: left;
+  display: none;
+  letter-spacing: 1.5px;
+  font-size: 14pt;
+  position: absolute;
+  z-index: 1;
+  background-color: black;
+}
+
+.dropdown-content a:link, .dropdown-content a:visited {
+  color: lightgray;
+}
+
+.dropdown-content a:hover {
+  background-color: #2f1f06;
+}
+
+
+/*_______________________________________ 
+********
+* MAIN *
+********
+*/
 main {
   margin-top: 150px;
 }
@@ -140,9 +194,9 @@ main h1, .subheading {
 .cast-list h2 {
   font-weight: bold;
   background: linear-gradient(to top, red, yellow);
-                -webkit-background-clip: text;
-                background-clip: text;
-                color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .cast-list .info {
