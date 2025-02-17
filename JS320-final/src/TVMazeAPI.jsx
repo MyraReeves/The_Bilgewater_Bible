@@ -67,7 +67,12 @@ function TVMazeAPI() {
             </tr>
         </table>
 
-        <p>IMDB page: <Link to='https://www.imdb.com/title/tt2375692/'>https://www.imdb.com/title/{object.externals.imdb}</Link></p>
+        <div className="additional-links">
+            <h4>Additional Links:</h4>
+            <p>🎦 &nbsp; IMDB page: <Link to='https://www.imdb.com/title/tt2375692/'>https://www.imdb.com/title/{object.externals.imdb}</Link></p>
+            <p>🔊 &nbsp; Fathoms Deep: A Black Sails Podcast: <Link to='https://commonroomradio.com/podcasts/fathoms-deep/'>https://commonroomradio.com/podcasts/fathoms-deep/</Link></p>
+        </div>
+        
     </div>
   )
 }
