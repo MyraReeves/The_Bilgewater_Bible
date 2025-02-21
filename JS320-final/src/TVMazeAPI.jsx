@@ -1,3 +1,5 @@
+// This file uses the TVMaze API to display the official show description (season 1) and statistics about the show.
+
 import { useEffect, useState } from "react";
 import { Link } from 'react-router-dom'
 
