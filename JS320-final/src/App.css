@@ -202,3 +202,18 @@ main h1, .subheading {
 .cast-list .info {
   color: #e9ad53;
 }
+
+
+/* _______________________________________
+***********
+* PODCAST *
+***********
+ */
+
+ .podcastPage {
+  text-align: center;
+  margin: 30px auto;
+  font-size: 20pt;
+  color: silver;
+  font-family: "Caveat", serif;
+ }
