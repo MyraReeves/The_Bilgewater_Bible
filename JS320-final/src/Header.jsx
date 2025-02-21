@@ -5,7 +5,7 @@ function Header() {
 
     return (
     <header>
-        <img src={title} alt='The words "Black Sails" ' className='title'/>
+        <Link to='/'><img src={title} alt='The words "Black Sails" ' className='title'/></Link>
         <div className='dropdown-menu'>
             <button className='dropdown-button'>🧭 Menu ▾</button>
             <ul className='dropdown-content'>
