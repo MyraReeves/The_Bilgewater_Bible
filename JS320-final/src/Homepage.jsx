@@ -1,5 +1,9 @@
-import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import PirateAPI from './PirateAPI'
+import AmazonLogo from './images/amazon.jpg'
+import NetflixLogo from './images/netflix.png'
+import AppleTvLogo from './images/AppleTv.png'
+import StarzLogo from './images/starz.png'
 
 function Homepage() {
   
@@ -29,6 +33,13 @@ function Homepage() {
                 <p className='release-dates'>Released from January-April 2017</p>
                 <iframe width="660" height="315" src="https://www.youtube.com/embed/gyJW2Xrf6EI?si=1x5dnwZo8BzjQ1Ap" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
             </div>
+
+            <p className='watch-on'>Watch all 4 seasons on: <br/>   
+                <Link to='https://www.amazon.com/Black-Sails/dp/B00HWIWG0U/ref=sr_1_2'> <img src={AmazonLogo} alt='Amazon Video'/> </Link>
+                <Link to='https://www.netflix.com/title/70285580'> <img src={NetflixLogo} alt='Netflix'/> </Link> 
+                <Link to='https://tv.apple.com/us/show/black-sails/umc.cmc.2aq6e38r265c2z6nkjdbacqvd'> <img src={AppleTvLogo} alt='Apple TV +'/> </Link> &nbsp;
+                <Link to='https://www.starz.com/us/en/series/black-sails/season-1/19965'> <img src={StarzLogo} alt='Starz'/> </Link>
+            </p>
         </main>
     )
 }
