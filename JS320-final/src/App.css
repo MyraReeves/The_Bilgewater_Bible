@@ -154,12 +154,15 @@ main h1, .subheading {
 **************
 */
 .show-stats {
-  margin-top: 70px;
   color: lightgray;
 }
 
-.show-stats p {
-  margin-bottom: 30px;
+.summary p {
+  margin: 0 40px 40px 40px;
+  font-family: "Pirata One", serif;
+  font-size: 16pt;
+  word-spacing: 5px;
+  text-align: center;
 }
 
 .show-stats img {
@@ -174,7 +177,7 @@ main h1, .subheading {
 }
 
 .additional-links {
-  margin: 150px 0 0 30px;
+  margin: 100px 0 0 30px;
 }
 
 .additional-links p, .additional-links h4{
@@ -186,6 +189,9 @@ main h1, .subheading {
   color:  #996515 ;
 }
 
+.additional-links p {
+  margin-bottom: 30px;
+}
 
 /* _______________________________________
 *************
