@@ -1,14 +1,19 @@
-import { Routes, Route, Link } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 
 import Homepage from './Homepage'
 import CastAPI from './CastAPI'
 import CharacterIndex from './CharacterList'
 import TVMazeAPI from './TVMazeAPI'
+import Postcast from './Podcast'
 
 function RoutePaths() {
 
     const Home = () => {
       return <Homepage/>
+    }
+
+    const Stats = () => {
+        return <TVMazeAPI/>
     }
 
     const Cast = () => {
@@ -19,17 +24,18 @@ function RoutePaths() {
         return <CharacterIndex/>
     }
 
-    const Stats = () => {
-        return <TVMazeAPI/>
-    }
+    const FathomsDeep= () => {
+        return <Postcast/> 
+    } 
 
 
     return (
         <Routes>
           <Route path='/' element={ <Home/> } />
+          <Route path='/stats' element={ <Stats/> } />
           <Route path='/cast' element={ <Cast/> } />
           <Route path='/characters' element={ <Characters/> } />
-          <Route path='/stats' element={ <Stats/> } />
+          <Route path='/podcast' element={ <FathomsDeep/> } />
         </Routes>
     )
 }
