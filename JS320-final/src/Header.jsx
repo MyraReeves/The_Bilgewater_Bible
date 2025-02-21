@@ -13,6 +13,7 @@ function Header() {
                 <li><Link to='/stats'>📜 Basic Facts </Link></li>
                 <li><Link to='/cast'>🎭 Cast </Link></li>
                 <li><Link to='/characters'>🎭 Characters </Link></li>
+                <li><Link to='/podcast'>🔊 Podcast </Link></li>
                 <li><Link to='/shopping'>💰 Shopping </Link></li>
             </ul>
         </div>
