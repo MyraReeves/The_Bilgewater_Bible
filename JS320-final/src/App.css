@@ -1,6 +1,9 @@
 body {
   background-color: black;
 }
+.centered {
+  text-align: center;
+}
 
 /* 
 **********
@@ -125,21 +128,65 @@ main h1, .subheading {
   border: 4px dotted brown;
   margin: 0 0 100px 30px;
   text-align: center;
-  padding: 10px 10px 30px 10px;
+  padding: 20px 10px 50px 10px;
   width: 800px;
   color: darkgrey;
 }
 
 .homepagePreviews {
-  font-size: 20pt;
+  font-family: serif;
+  font-size: 23pt;
+  font-weight: bold;
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 10px;
 }
 
 .release-dates {
   margin-top: 0;
-  margin-bottom: 27px;
+  font-family: serif;
+  margin-bottom: 30px;
 }
+
+.episodes {
+  width: 40%;
+  float: right;
+  margin: 0 10px 20px 0;
+  display: block;
+  border: solid 1px brown;
+  padding: 5px 3px 0 10px;
+}
+
+.episodes h1 {
+  font-size: 20pt;
+  text-decoration: underline;
+}
+
+.episode-info {
+  display: block;
+  margin: 5px 0 7px 0;
+}
+
+.episode-info h2 {
+  font-family: "Pirata One", serif;
+  font-size: 12pt;
+  margin: 0;
+}
+
+.episode-info td img {
+  float: left;
+  width: 100px;
+  margin: 1px 10px 1px 0;
+}
+
+.episode-info td {
+  font-size: 10pt;
+}
+
+.episode-info td .floatRight {
+  float: right;
+  font-family: serif;
+}
+
 
 .watch-on {
   text-align: center;
@@ -194,11 +241,11 @@ main h1, .subheading {
 }
 
 /* _______________________________________
-*************
-* CAST PAGE *
-*************
+******************************
+* CAST PAGE & CHARACTER PAGE *
+******************************
  */
-.cast-list {
+.cast-list, .character-list {
   color: #996515;
   margin: 30px;
   text-align: center;
@@ -209,7 +256,7 @@ main h1, .subheading {
   margin: 0;
 }
 
-.cast-list h2 {
+.cast-list h2, .character-list h2 {
   font-weight: bold;
   background: linear-gradient(to top, red, yellow);
   -webkit-background-clip: text;
@@ -219,6 +266,10 @@ main h1, .subheading {
 
 .cast-list .info {
   color: #e9ad53;
+}
+
+.character-list img {
+  border: solid rgb(255, 77, 0) 1px;
 }
 
 
