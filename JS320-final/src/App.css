@@ -147,6 +147,12 @@ main h1, .subheading {
   margin-bottom: 30px;
 }
 
+.IMDB-rating {
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-family: serif;
+}
+
 .episodes {
   width: 40%;
   float: right;
