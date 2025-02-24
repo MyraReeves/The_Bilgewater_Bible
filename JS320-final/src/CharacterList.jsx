@@ -64,9 +64,6 @@ function CharacterList() {
                 ))
                 }
             </div>
-
-            <img src={ships} alt='temporary placeholder image' />
-            <br/><Link to='/'>	🏠︎ Return to Homepage 🏠︎</Link>
         </main>
     )
 }
