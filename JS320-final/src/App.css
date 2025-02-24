@@ -298,3 +298,46 @@ main h1, .subheading {
   color: silver;
   font-family: "Caveat", serif;
  }
+
+
+ /* _______________________________________
+**************
+* LEARN MORE *
+**************
+ */
+
+.Bahamas-facts {
+  text-align: center;
+  font-family: serif;
+}
+
+.Bahamas-facts h2 {
+  color: #5cc1df;
+  font-size: 30pt;
+}
+
+.flag {
+  max-height: 300px;
+  margin-right: 50px;
+}
+
+.Bahamas-facts table {
+  margin: 10px auto 15px auto;
+  font-size: 14pt;
+}
+
+.table-align-left {
+  text-align: left;
+}
+
+.table-align-left td {
+  padding: 0 30px 0 50px;
+}
+
+.teal {
+  color: #5cc1df;
+}
+
+.yellow {
+  color: gold;
+}
