@@ -4,7 +4,8 @@ import Homepage from './Homepage'
 import CastAPI from './CastAPI'
 import CharacterIndex from './CharacterList'
 import TVMazeAPI from './TVMazeAPI'
-import Postcast from './Podcast'
+import Podcast from './Podcast'
+import LearnMore from './LearnMore'                 // Temporarily to test API calls
 
 function RoutePaths() {
 
@@ -24,9 +25,13 @@ function RoutePaths() {
         return <CharacterIndex/>
     }
 
-    const FathomsDeep= () => {
-        return <Postcast/> 
+    const FathomsDeep = () => {
+        return <Podcast/> 
     } 
+
+    const Learning = () => {
+        return <LearnMore />            // Temporarily to test API.
+    }
 
 
     return (
@@ -36,6 +41,7 @@ function RoutePaths() {
           <Route path='/cast' element={ <Cast/> } />
           <Route path='/characters' element={ <Characters/> } />
           <Route path='/podcast' element={ <FathomsDeep/> } />
+          <Route path='/learn' element= { <Learning/> } />
         </Routes>
     )
 }
