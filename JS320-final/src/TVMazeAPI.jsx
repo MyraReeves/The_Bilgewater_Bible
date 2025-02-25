@@ -99,6 +99,38 @@ function TVMazeAPI() {
                 <h4>Additional Links:</h4>
                 <p>🎦 &nbsp; IMDB page: <Link to='https://www.imdb.com/title/tt2375692/'>https://www.imdb.com/title/{object.externals.imdb}</Link></p>
             </div>
+
+            <div className="ratings">
+                <h2>Ratings</h2>
+
+                <h3>Season 1</h3>
+                <p className='IMDB-rating'>
+                    Average User Rating on IMDB: 8 out of 10 stars <br/>
+                    Audience Rating on Rotten Tomatoes: 79% <br/>
+                    Critics Reviews: 65%
+                </p>
+                
+                <h3>Season 2</h3>
+                <p className='IMDB-rating'>
+                    Average User Rating on IMDB: 8.5 out of 10 stars <br/>
+                    Audience Rating on Rotten Tomatoes: 90% <br/>
+                    Critics Reviews: 100%
+                </p>
+
+                <h3>Season 3</h3>
+                <p className='IMDB-rating'>
+                    Average User Rating on IMDB: 9 out of 10 stars <br/>
+                    Audience Rating on Rotten Tomatoes: 86% <br/> 
+                    Critics Reviews: 80%
+                </p>
+
+                <h3>Season 4</h3>
+                <p className='IMDB-rating'>
+                    Average User Rating on IMDB: 8.5 out of 10 stars <br/>
+                    Audience Rating on Rotten Tomatoes: 78% <br/>
+                    Critics Reviews: 80%
+                </p>
+            </div>
         
         </div>
     </main>
