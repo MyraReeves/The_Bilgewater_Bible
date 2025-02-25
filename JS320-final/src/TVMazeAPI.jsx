@@ -44,13 +44,97 @@ function TVMazeAPI() {
         <div className="show-stats">
         
             <div className="summary">
-            <p>
-                {summaryFirstParagraph} <br/>
-                {summarySecondParagraph} <br/>
-                {summaryThirdParagraph} {summaryFourthParagraph}
-            </p>
-
+                <p>
+                    {summaryFirstParagraph} <br/>
+                    {summarySecondParagraph} <br/>
+                    {summaryThirdParagraph} {summaryFourthParagraph}
+                </p>
             </div>
+
+            <div className="ratings">
+                <h2>★ Ratings ★</h2>
+
+                <table>
+                    <thead>
+                        Season 1
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Average of User Ratings on IMDB:</td>
+                            <td><span className="rating">8</span></td>
+                        </tr>
+                        <tr>
+                            <td>Audience Rating on Rotten Tomatoes:</td>
+                            <td><span className="rating">79%</span></td>
+                        </tr>
+                        <tr>
+                            <td>Critics Reviews on Rotten Tomatoes:</td>
+                            <td><span className="rating">65%</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <thead>
+                        Season 2
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Average of User Ratings on IMDB:</td>
+                            <td><span className="rating">8.5</span></td>
+                        </tr>
+                        <tr>
+                            <td>Audience Rating on Rotten Tomatoes:</td>
+                            <td><span className="rating">90%</span></td>
+                        </tr>
+                        <tr>
+                            <td>Critics Reviews on Rotten Tomatoes:</td>
+                            <td><span className="rating">100%</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <thead>
+                        Season 3
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Average of User Ratings on IMDB:</td>
+                            <td><span className="rating">9</span></td>
+                        </tr>
+                        <tr>
+                            <td>Audience Rating on Rotten Tomatoes:</td>
+                            <td><span className="rating">86%</span></td>
+                        </tr>
+                        <tr>
+                            <td>Critics Reviews on Rotten Tomatoes:</td>
+                            <td><span className="rating">80%</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <thead>
+                        Season 4
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Average of User Ratings on IMDB:</td>
+                            <td><span className="rating">8.5</span></td>
+                        </tr>
+                        <tr>
+                            <td>Audience Rating on Rotten Tomatoes:</td>
+                            <td><span className="rating">78%</span></td>
+                        </tr>
+                        <tr>
+                            <td>Critics Reviews on Rotten Tomatoes:</td>
+                            <td><span className="rating">80%</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
 
             <img src={object.image.medium} alt='Season 4 official teaser poster for Black Sails' />
             <table>
@@ -85,7 +169,7 @@ function TVMazeAPI() {
                 </tr>
 
                 <tr>
-                    <td>Final episode:</td>
+                    <td>Final episode aired on:</td>
                     <td>{object.ended}</td>
                 </tr>
 
@@ -98,38 +182,6 @@ function TVMazeAPI() {
             <div className="additional-links">
                 <h4>Additional Links:</h4>
                 <p>🎦 &nbsp; IMDB page: <Link to='https://www.imdb.com/title/tt2375692/'>https://www.imdb.com/title/{object.externals.imdb}</Link></p>
-            </div>
-
-            <div className="ratings">
-                <h2>Ratings</h2>
-
-                <h3>Season 1</h3>
-                <p className='IMDB-rating'>
-                    Average User Rating on IMDB: 8 out of 10 stars <br/>
-                    Audience Rating on Rotten Tomatoes: 79% <br/>
-                    Critics Reviews: 65%
-                </p>
-                
-                <h3>Season 2</h3>
-                <p className='IMDB-rating'>
-                    Average User Rating on IMDB: 8.5 out of 10 stars <br/>
-                    Audience Rating on Rotten Tomatoes: 90% <br/>
-                    Critics Reviews: 100%
-                </p>
-
-                <h3>Season 3</h3>
-                <p className='IMDB-rating'>
-                    Average User Rating on IMDB: 9 out of 10 stars <br/>
-                    Audience Rating on Rotten Tomatoes: 86% <br/> 
-                    Critics Reviews: 80%
-                </p>
-
-                <h3>Season 4</h3>
-                <p className='IMDB-rating'>
-                    Average User Rating on IMDB: 8.5 out of 10 stars <br/>
-                    Audience Rating on Rotten Tomatoes: 78% <br/>
-                    Critics Reviews: 80%
-                </p>
             </div>
         
         </div>
