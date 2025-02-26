@@ -360,6 +360,22 @@ main h1, .subheading {
 **************
  */
 
+ .learning-dropdown {
+  width: 370px;
+  margin: 5px auto;
+  font-family: "Pirata One", serif;
+  font-size: 20pt;
+  /* border: 1px red solid; */
+ }
+
+ .learning-dropdown button {
+  padding: 2px 10px;
+  margin-left: 15px;
+  background-color: #e9ad53;
+  color:#49310a;
+  font-size: 14pt;
+ }
+
 .Bahamas-facts {
   text-align: center;
   font-family: serif;
