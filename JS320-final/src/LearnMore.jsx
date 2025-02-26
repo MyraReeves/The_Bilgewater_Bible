@@ -1,6 +1,6 @@
 // This file 
 
-import { useEffect, useState } from "react"
+import { useState } from "react"
 
 import ships from './images/ships1.jpg'
 import LearningDropdownMenu from "./LearningDropdown"
@@ -22,7 +22,10 @@ function LearnMore() {
   
     return (
         <main>
-            <LearningDropdownMenu />
+            <LearningDropdownMenu 
+                selection={selection} 
+                setSelection={setSelection} 
+            />
 
             <div className="selection">{checkForSelection()}</div>
             
