@@ -5,9 +5,12 @@ import CastAPI from './CastAPI'
 import CharacterIndex from './CharacterList'
 import TVMazeAPI from './TVMazeAPI'
 import Podcast from './Podcast'
-import LearnMore from './LearnMore'                 // Temporarily to test API calls
+import LearnMore from './LearnMore'
+import PageNotFound from './PageNotFound'
 
 function RoutePaths() {
+
+    /*  THIS APPEARS TO NOT BE NEEDED!!!!
 
     const Home = () => {
       return <Homepage/>
@@ -30,18 +33,21 @@ function RoutePaths() {
     } 
 
     const Learning = () => {
-        return <LearnMore />            // Temporarily to test API.
+        return <LearnMore />
     }
+
+    */
 
 
     return (
         <Routes>
-          <Route path='/' element={ <Home/> } />
-          <Route path='/stats' element={ <Stats/> } />
-          <Route path='/cast' element={ <Cast/> } />
-          <Route path='/characters' element={ <Characters/> } />
-          <Route path='/podcast' element={ <FathomsDeep/> } />
-          <Route path='/learn' element= { <Learning/> } />
+          <Route path='/' element={ <Homepage/> } />
+          <Route path='/stats' element={ <TVMazeAPI/> } />
+          <Route path='/cast' element={ <CastAPI/> } />
+          <Route path='/characters' element={ <CharacterIndex/> } />
+          <Route path='/podcast' element={ <Podcast/> } />
+          <Route path='/learn' element= { <LearnMore/> } />
+          <Route path='*' element={ <PageNotFound/> } />
         </Routes>
     )
 }
