@@ -431,3 +431,29 @@ main h1, .subheading {
 .yellow {
   color: gold;
 }
+
+ /* _______________________________________
+*************
+* 404 ERROR *
+*************
+ */
+
+.page-not-found {
+  text-align: center;
+  background-color: whitesmoke;
+  color: black;
+  font-family: "Pirata One", serif;
+  width: 100%;
+  padding-top: 1px;
+  margin: 0 auto 20px auto;
+}
+
+.page-not-found h1 {
+  font-size: 122pt;
+  margin: 0;
+}
+
+.page-not-found h2 {
+  font-size: 50pt;
+  margin: 0;
+}
