@@ -45,7 +45,7 @@ function Homepage() {
                     Episodes: XXIX - XXXVIII <br/>
                     Released from January-April 2017
                 </p>
-                <iframe width="660" height="315" src="https://www.youtube.com/embed/gyJW2Xrf6EI?si=1x5dnwZo8BzjQ1Ap" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                <iframe width="660" height="315" src="https://www.youtube.com/embed/gyJW2Xrf6EI?si=1x5dnwZo8BzjQ1Ap" title="YouTube video player" frameBorder="0"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
             </div>
 
             <p className='watch-on'>Watch all 4 seasons on: <br/>   
@@ -61,7 +61,7 @@ function Homepage() {
                 </div>
 
                 <div style={{marginTop: "50px"}}>
-                    <iframe width="660" height="365" src="https://www.youtube.com/embed/XFTcA4QLHw0" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                    <iframe width="660" height="365" src="https://www.youtube.com/embed/XFTcA4QLHw0" title="YouTube video player"  frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
                 </div>
            </div>
 
