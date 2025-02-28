@@ -1,10 +1,11 @@
 // This file maps an array of objects given by the API, to display information about each episode.
 
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
+import PropTypes from "prop-types";
 
-function EpisodeList() {
+function EpisodeList(props) {
+    const {hasError, setHasError} = props;
     const [arrayOfEpisodes, setArrayOfEpisodes] = useState([]);
-    const [hasError, setHasError] = useState(false);                    // NOTE: Since this is repeated in more than one file, it should be changed into a prop
 
     useEffect( () => {
         fetch('https://api.tvmaze.com/shows/182/episodes')
@@ -50,6 +51,11 @@ function EpisodeList() {
             </table>            
         </div>
     )
+}
+
+EpisodeList.propTypes = {
+    hasError: PropTypes.bool,
+    setHasError: PropTypes.func,
 }
 
 export default EpisodeList
