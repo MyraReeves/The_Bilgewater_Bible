@@ -82,7 +82,8 @@ function Stats(props) {
 
                     <tr>
                         <td>Aired on:</td>
-                        <td>{object.schedule.days}s</td>
+                        <td>Saturdays 9pm </td>
+                        {/* For some reason {object.schedule.days} returns "Sunday" even though ALL records across the internet, including the Starz preview trailers themselves, show that the show aired on Saturdays instead. So I am hard-coding the above replacement for {object.shedule.days} */}
                     </tr>
 
                     <tr>
