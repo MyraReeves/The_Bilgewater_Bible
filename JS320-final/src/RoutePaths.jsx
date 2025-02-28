@@ -1,42 +1,14 @@
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom';
 
-import Homepage from './Homepage'
-import CastAPI from './CastAPI'
-import CharacterIndex from './CharacterList'
-import TVMazeAPI from './TVMazeAPI'
-import Podcast from './Podcast'
-import LearnMore from './LearnMore'
-import PageNotFound from './PageNotFound'
+import Homepage from './Homepage';
+import CastAPI from './CastAPI';
+import CharacterIndex from './CharacterList';
+import TVMazeAPI from './TVMazeAPI';
+import Podcast from './Podcast';
+import LearnMore from './LearnMore';
+import PageNotFound from './PageNotFound';
 
 function RoutePaths() {
-
-    /*  THIS APPEARS TO NOT BE NEEDED!!!!
-
-    const Home = () => {
-      return <Homepage/>
-    }
-
-    const Stats = () => {
-        return <TVMazeAPI/>
-    }
-
-    const Cast = () => {
-        return <CastAPI/>
-    }
-
-    const Characters = () => {
-        return <CharacterIndex/>
-    }
-
-    const FathomsDeep = () => {
-        return <Podcast/> 
-    } 
-
-    const Learning = () => {
-        return <LearnMore />
-    }
-
-    */
 
 
     return (
