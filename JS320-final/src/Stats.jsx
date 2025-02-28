@@ -82,7 +82,7 @@ function Stats(props) {
 
                     <tr>
                         <td>Aired on:</td>
-                        <td>Saturdays 9pm <span className="tiny">(Season 1-3)</span> &nbsp; / &nbsp; {object.schedule.days}s 9pm <span className="tiny">(Season 4)</span></td>
+                        <td>Saturdays 9pm <span className="tiny">(Seasons 1-3)</span> &nbsp; / &nbsp; {object.schedule.days}s 9pm <span className="tiny">(Season 4)</span></td>
                     </tr>
 
                     <tr>
