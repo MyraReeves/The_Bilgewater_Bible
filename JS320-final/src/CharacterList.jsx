@@ -1,13 +1,12 @@
 // This file maps an array of objects given by the API, in order to generate a visual list on the screen of the characters in the show.
 
 import { useEffect, useState } from "react"
-import { Link } from 'react-router-dom'
+import PropTypes from "prop-types";
+// import { Link } from 'react-router-dom'
 
-import ships from './images/ships1.jpg'
-
-function CharacterList() {
+function CharacterList(props) {
     const [arrayOfcharacters, setArrayOfCharacters] = useState([]);
-    const [hasError, setHasError] = useState(false);                    // NOTE: Since this is repeated in more than one file, it should be changed into a prop
+    const {hasError, setHasError} = props;
 
     useEffect( () => {
         fetch('https://api.tvmaze.com/shows/182/cast')
@@ -22,7 +21,7 @@ function CharacterList() {
                 console.log('%cThe following error occured when attempting to fetch data from the API: \n', 'color: red; font-weight: bold; font-size: larger', error);
                 setHasError(true);
             });
-        }, []);
+        });
 
 
     if (hasError) {
@@ -33,8 +32,7 @@ function CharacterList() {
         return <div className="loading">Loading information...</div>;
     }
 
-
-    // Sort the array in alphabetical order of the actor names:
+    // Sort the array into alphabetical order:
     arrayOfcharacters.sort(
         function(object1, object2) {
             if (object1.character.name < object2.character.name) {
@@ -66,6 +64,11 @@ function CharacterList() {
             </div>
         </main>
     )
+}
+
+CharacterList.propTypes = {
+    hasError: PropTypes.bool.isRequired,
+    setHasError: PropTypes.func.isRequired,
 }
 
 export default CharacterList
