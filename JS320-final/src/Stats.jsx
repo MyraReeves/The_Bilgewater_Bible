@@ -59,45 +59,47 @@ function Stats(props) {
 
             <img src={object.image.medium} alt='Season 4 official teaser poster for Black Sails' />
             <table>
-                <tr>
-                    <td>Genre:</td>
-                    <td>{genre2}, {genre3}, {genre1}</td>
-                </tr>
+                <tbody>
+                    <tr>
+                        <td>Genre:</td>
+                        <td>{genre2}, {genre3}, {genre1}</td>
+                    </tr>
 
-                <tr>
-                    <td>Network:</td>
-                    <td>{object.network.name}</td>
-                </tr>
+                    <tr>
+                        <td>Network:</td>
+                        <td>{object.network.name}</td>
+                    </tr>
 
-                <tr>
-                    <td>Filmed in:</td>
-                    <td>Cape Town, South Africa</td>
-                </tr>
+                    <tr>
+                        <td>Filmed in:</td>
+                        <td>Cape Town, South Africa</td>
+                    </tr>
 
-                <tr>
-                    <td>Premiered on:</td>
-                    <td>{object.premiered}</td>
-                </tr>
+                    <tr>
+                        <td>Premiered on:</td>
+                        <td>{object.premiered}</td>
+                    </tr>
 
-                <tr>
-                    <td>Aired on:</td>
-                    <td>{object.schedule.days}s</td>
-                </tr>
+                    <tr>
+                        <td>Aired on:</td>
+                        <td>{object.schedule.days}s</td>
+                    </tr>
 
-                <tr>
-                    <td>Average length of each episode:</td>
-                    <td>{object.averageRuntime} minutes</td>
-                </tr>
+                    <tr>
+                        <td>Average length of each episode:</td>
+                        <td>{object.averageRuntime} minutes</td>
+                    </tr>
 
-                <tr>
-                    <td>Final episode aired on:</td>
-                    <td>{object.ended}</td>
-                </tr>
+                    <tr>
+                        <td>Final episode aired on:</td>
+                        <td>{object.ended}</td>
+                    </tr>
 
-                <tr>
-                    <td>Official website:</td>
-                    <td><Link to={object.officialSite}>{object.officialSite}</Link></td>
-                </tr>
+                    <tr>
+                        <td>Official website:</td>
+                        <td><Link to={object.officialSite}>{object.officialSite}</Link></td>
+                    </tr>
+                </tbody>
             </table>
 
             <div className="additional-links">
