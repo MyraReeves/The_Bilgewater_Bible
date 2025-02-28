@@ -7,7 +7,11 @@ function Ratings() {
 
         <table>
             <thead>
-                Season 1
+                <tr>
+                    <th>
+                        Season 1
+                    </th>
+                </tr>
             </thead>
             <tbody>
                 <tr>
@@ -27,7 +31,11 @@ function Ratings() {
 
         <table>
             <thead>
-                Season 2
+                <tr>
+                    <th>
+                        Season 2
+                    </th>
+                </tr>
             </thead>
             <tbody>
                 <tr>
@@ -47,7 +55,11 @@ function Ratings() {
 
         <table>
             <thead>
-                Season 3
+                <tr>
+                    <th>
+                        Season 3
+                    </th>
+                </tr>
             </thead>
             <tbody>
                 <tr>
@@ -67,7 +79,11 @@ function Ratings() {
 
         <table>
             <thead>
-                Season 4
+                <tr>    
+                    <th>
+                        Season 4
+                    </th>
+                </tr>
             </thead>
             <tbody>
                 <tr>
