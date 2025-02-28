@@ -2,11 +2,12 @@
 
 import { useEffect, useState } from "react";
 import { Link } from 'react-router-dom'
+import PropTypes from "prop-types";
 import Ratings from "./Ratings";
 
-function TVMazeAPI() {
+function Stats(props) {
     const [object, setObject] = useState(null);
-    const [hasError, setHasError] = useState(false);
+    const {hasError, setHasError} = props;
 
     useEffect( () => {
         fetch('https://api.tvmaze.com/shows/182')
@@ -20,7 +21,7 @@ function TVMazeAPI() {
                 console.log('%cThe following error occured when attempting to fetch data from the API: \n', 'color: red; font-weight: bold; font-size: larger', error);
                 setHasError(true);
             });
-        }, []);
+        }, [setHasError]);
 
 
     if (hasError) {
@@ -109,4 +110,9 @@ function TVMazeAPI() {
   )
 }
 
-export default TVMazeAPI
+Stats.propTypes = {
+    hasError: PropTypes.bool.isRequired,
+    setHasError: PropTypes.func.isRequired,
+}
+
+export default Stats
