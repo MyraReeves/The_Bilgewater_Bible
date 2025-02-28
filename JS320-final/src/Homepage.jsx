@@ -1,17 +1,22 @@
-import { Link } from 'react-router-dom'
-import PirateAPI from './PirateAPI'
-import EpisodeList from './EpisodeAPI'
-import AmazonLogo from './images/amazon.jpg'
-import NetflixLogo from './images/netflix.png'
-import AppleTvLogo from './images/AppleTv.png'
-import StarzLogo from './images/starz.png'
+import PropTypes from "prop-types";
+import { Link } from 'react-router-dom';
+import PirateAPI from './PirateAPI';
+import EpisodeList from './EpisodeAPI';
+import AmazonLogo from './images/amazon.jpg';
+import NetflixLogo from './images/netflix.png';
+import AppleTvLogo from './images/AppleTv.png';
+import StarzLogo from './images/starz.png';
 
-function Homepage() {
+function Homepage(props) {
+    const {hasError, setHasError} = props;
   
     return (
         <main>
-            <PirateAPI />
-            <EpisodeList/>
+            <PirateAPI/>
+            <EpisodeList
+                hasError={hasError} 
+                setHasError={setHasError}  />
+
             <div className='trailers'>
                 <p className='homepagePreviews'>Season 1</p>
                 <p className='release-dates'>
@@ -67,6 +72,11 @@ function Homepage() {
 
         </main>
     )
+}
+
+Homepage.propTypes = {
+    hasError: PropTypes.bool,
+    setHasError: PropTypes.func,
 }
 
 export default Homepage
