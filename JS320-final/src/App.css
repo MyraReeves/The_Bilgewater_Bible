@@ -148,12 +148,6 @@ main h1, .subheading {
   margin-bottom: 30px;
 }
 
-/* .IMDB-rating {
-  margin-top: 50px;
-  margin-bottom: 0;
-  font-family: serif;
-} */
-
 .episodes {
   width: 40%;
   float: right;
@@ -265,6 +259,7 @@ main h1, .subheading {
 
 .ratings table thead {
   text-decoration: underline;
+  text-align: left;
   margin-bottom: 0;
   color: brown;
   font-weight: bold;
