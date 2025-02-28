@@ -20,7 +20,7 @@ function EpisodeList(props) {
                 console.log('%cThe following error occured when attempting to fetch data from the API: \n', 'color: red; font-weight: bold; font-size: larger', error);
                 setHasError(true);
             });
-        }, []);
+        });
 
 
     if (hasError) {
@@ -35,27 +35,29 @@ function EpisodeList(props) {
     return (
         <div className="episodes">
             <h1>Episode List</h1>
-            <table>
                 {arrayOfEpisodes.map( (eachEpisode, index) => (
                     <div key={index} className="episode-info">
-                        <tr>
-                            <td><h2>Episode {eachEpisode.name} </h2></td>
-                        </tr>
-                        <tr>
-                            <td><img src = {eachEpisode.image.medium} alt = 'Marketing image for the episode'/></td>
-                            <td><span className="floatRight">{eachEpisode.summary.slice(3, -4)}</span></td>
-                        </tr>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td><h2>Episode {eachEpisode.name} </h2></td>
+                                </tr>
+                                <tr>
+                                    <td><img src = {eachEpisode.image.medium} alt = 'Marketing image for the episode'/></td>
+                                    <td><span className="floatRight">{eachEpisode.summary.slice(3, -4)}</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 ))
                 }
-            </table>            
         </div>
     )
 }
 
 EpisodeList.propTypes = {
-    hasError: PropTypes.bool,
-    setHasError: PropTypes.func,
+    hasError: PropTypes.bool.isRequired,
+    setHasError: PropTypes.func.isRequired,
 }
 
 export default EpisodeList
