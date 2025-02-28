@@ -7,6 +7,13 @@ function CastAPI(props) {
     const [arrayOfcastMembers, setArrayOfcastMembers] = useState([]);
     const {hasError, setHasError} = props;
 
+    const ifNoBirthday = (birthday) => {
+        if (birthday == null){
+            birthday = 'unknown'
+        }
+        return (birthday)
+    }
+
     useEffect( () => {
         fetch('https://api.tvmaze.com/shows/182/cast')
 
@@ -30,7 +37,6 @@ function CastAPI(props) {
     if (arrayOfcastMembers === null) {
         return <div className="loading">Loading information...</div>;
     }
-
 
     // Sort the array in alphabetical order based on first names:
     arrayOfcastMembers.sort(
@@ -58,7 +64,7 @@ function CastAPI(props) {
                     <h2> {eachCastMember.person.name} </h2>
                     <img src = {eachCastMember.person.image.medium} alt = 'Photo of the actor'/>
                     <p> Nationality: &nbsp; <span className="info"> {eachCastMember.person.country.name} </span> </p>
-                    <p> Born on: &nbsp; <span className="info"> {eachCastMember.person.birthday} </span> </p>
+                    <p> Born on: &nbsp; <span className="info"> {ifNoBirthday(eachCastMember.person.birthday)}</span> </p>
                     <p> Portrays: &nbsp; <span className="info"> {eachCastMember.character.name} </span> </p>
                 </div>
                 ))
