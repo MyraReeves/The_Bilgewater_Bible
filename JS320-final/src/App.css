@@ -121,8 +121,27 @@ main h1, .subheading {
 */
 .greeting {
   font-family: "Caveat", serif;
-  font-size: 25pt;
-  margin: 0 0 20px 30px;
+  margin: 0 50px 60px 50px;
+  text-align: center;
+}
+
+.greeting h2 {
+  margin: 0;
+  font-size: 28pt;
+  background: radial-gradient(circle, rgb(80, 52, 3), brown, rgb(103, 69, 11), brown, rgb(80, 52, 3) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.greeting p {
+  font-weight: 200;
+  margin: 0;
+  font-size: 20pt;
+  background: radial-gradient(circle, rgb(80, 52, 3), burlywood, rgb(103, 69, 11), burlywood, rgb(80, 52, 3) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .trailers {
@@ -381,7 +400,7 @@ main h1, .subheading {
 
 .selection {
   text-align: center;
-  margin: 20px auto 100px auto;
+  margin: 60px auto 100px auto;
   position: relative;
 }
 
