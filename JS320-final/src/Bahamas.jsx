@@ -1,11 +1,12 @@
-import { useEffect, useState } from "react";
+// This file uses the REST Countries API to generate basic information about the Bahamas.
 
-import NassauMap from './images/Bahamas.jpg'
+import { useEffect, useState } from "react";
+import NassauMap from './images/Bahamas.jpg';
 
 
 function BahamasInfo() {
     const [arrayOfBahamasFacts, setArrayOfBahamasFacts] = useState([]);
-    const [hasError, setHasError] = useState(false);                    // NOTE: Since this is repeated in more than one file, it should be changed into a prop
+    const [hasError, setHasError] = useState(false);
 
     useEffect( () => {
         fetch('https://restcountries.com/v3.1/name/Bahamas?fullText=true')
