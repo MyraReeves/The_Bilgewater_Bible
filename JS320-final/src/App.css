@@ -480,3 +480,17 @@ main h1, .subheading {
   font-size: 50pt;
   margin: 0;
 }
+
+
+/*_______________________________________
+**************
+* LEARN MORE *
+**************
+*/
+footer {
+  color: gray;
+  margin-top: 30px;
+  bottom: 0;
+  position: absolute;
+  display: block;
+}
