@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import PirateAPI from './PirateAPI';
 import EpisodeList from './EpisodeAPI';
 import AmazonLogo from './images/amazon.jpg';
 import NetflixLogo from './images/netflix.png';
@@ -10,7 +9,11 @@ function Homepage() {
     
     return (
         <main>
-            <PirateAPI/>
+            <div className="greeting">
+                <h2>Welcome to Governor Augustus Featherstone's Complete and Accurate, Totally Fictional <br/>Journal of Who's Who in Nassau Town Circa 1715.</h2> 
+                <p>Here-in lies an account of flibustiers, buccaneers, freebooters, maroons, privateers, and the occassional jungaless. <br/> Dis ting go with sense and keep yer wits about ye. For there is no peace beyond the line!</p>
+            </div>
+
             <EpisodeList/>
             
             <div className='trailers'>
