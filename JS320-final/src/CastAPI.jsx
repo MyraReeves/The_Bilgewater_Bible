@@ -5,6 +5,7 @@ import { useEffect, useState } from "react"
 function CastAPI() {
     const [arrayOfcastMembers, setArrayOfcastMembers] = useState([]);
     const [hasError, setHasError] = useState(false);
+    const [loading, setLoading] = useState(true);
 
     const ifNoBirthday = (birthday) => {
         if (birthday == null){
@@ -25,7 +26,12 @@ function CastAPI() {
             .catch( error => {
                 console.log('%cThe following error occured when attempting to fetch data from the API: \n', 'color: red; font-weight: bold; font-size: larger', error);
                 setHasError(true);
-            });
+            })
+
+            .finally( () => {
+              setLoading(false)
+            })
+
         }, []);
 
 
@@ -33,8 +39,12 @@ function CastAPI() {
         return <div className="error">⛔ An error occurred while fetching the information.  Sorry! ⛔ <br/>Please check the console for further details.</div>;
     }
 
+    if (loading) {
+        return <div className="loading">Loading information...</div>
+    }
+
     if (arrayOfcastMembers === null) {
-        return <div className="loading">Loading information...</div>;
+        return <div className="loading">The API failed to return any data. <br/> Please try again later</div>;
     }
 
     // Sort the array in alphabetical order based on first names:

@@ -6,6 +6,7 @@ import { useEffect, useState } from "react"
 function CharacterList() {
     const [arrayOfcharacters, setArrayOfCharacters] = useState([]);
     const [hasError, setHasError] = useState(false);
+    const [loading, setLoading] = useState(true);
 
     useEffect( () => {
         fetch('https://api.tvmaze.com/shows/182/cast')
@@ -19,7 +20,12 @@ function CharacterList() {
             .catch( error => {
                 console.log('%cThe following error occured when attempting to fetch data from the API: \n', 'color: red; font-weight: bold; font-size: larger', error);
                 setHasError(true);
-            });
+            })
+
+            .finally( () => {
+              setLoading(false)
+            })
+
         }, []);
 
 
@@ -27,8 +33,12 @@ function CharacterList() {
         return <div className="error">⛔ An error occurred while fetching the information.  Sorry! ⛔ <br/>Please check the console for further details.</div>;
     }
 
+    if (loading) {
+        return <div className="loading">Loading information...</div>
+    }
+
     if (arrayOfcharacters === null) {
-        return <div className="loading">Loading information...</div>;
+        return <div className="loading">The API failed to return any data. <br/> Please try again later</div>;
     }
 
     // Sort the array into alphabetical order:
