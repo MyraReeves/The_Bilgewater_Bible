@@ -5,7 +5,6 @@ function LearningDropdownMenu(props) {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log(selection)
      };
 
     const handleSelection = (event) => {
@@ -23,7 +22,7 @@ function LearningDropdownMenu(props) {
                 <option value="option3">Option 3</option>
                 <option value="option4">Option 4</option>
         </select>
-        <input type="submit" value="Submit"/>
+        {/* <input type="submit" value="Submit"/> */}
         </form>
     </div>
   )
