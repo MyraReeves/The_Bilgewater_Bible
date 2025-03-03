@@ -1,11 +1,10 @@
 // This file maps an array of objects given by the API, to display information about each episode.
 
 import { useEffect, useState } from "react";
-import PropTypes from "prop-types";
 
-function EpisodeList(props) {
-    const {hasError, setHasError} = props;
+function EpisodeList() {
     const [arrayOfEpisodes, setArrayOfEpisodes] = useState([]);
+    const [hasError, setHasError] = useState(false);
 
     useEffect( () => {
         fetch('https://api.tvmaze.com/shows/182/episodes')
@@ -20,7 +19,7 @@ function EpisodeList(props) {
                 console.log('%cThe following error occured when attempting to fetch data from the API: \n', 'color: red; font-weight: bold; font-size: larger', error);
                 setHasError(true);
             });
-        });
+        }, []);
 
 
     if (hasError) {
@@ -53,11 +52,6 @@ function EpisodeList(props) {
                 }
         </div>
     )
-}
-
-EpisodeList.propTypes = {
-    hasError: PropTypes.bool.isRequired,
-    setHasError: PropTypes.func.isRequired,
 }
 
 export default EpisodeList
