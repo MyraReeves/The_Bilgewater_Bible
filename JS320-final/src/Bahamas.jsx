@@ -7,6 +7,7 @@ import NassauMap from './images/Bahamas.jpg';
 function BahamasInfo() {
     const [arrayOfBahamasFacts, setArrayOfBahamasFacts] = useState([]);
     const [hasError, setHasError] = useState(false);
+    const [loading, setLoading] = useState(true);
 
     useEffect( () => {
         fetch('https://restcountries.com/v3.1/name/Bahamas?fullText=true')
@@ -20,7 +21,12 @@ function BahamasInfo() {
             .catch( error => {
                 console.log('%cThe following error occured when attempting to fetch data from the API: \n', 'color: red; font-weight: bold; font-size: larger', error);
                 setHasError(true);
-            });
+            })
+
+            .finally( () => {
+              setLoading(false)
+            })
+
         }, []);
 
 
@@ -28,8 +34,12 @@ function BahamasInfo() {
         return <div className="error">⛔ An error occurred while fetching the information.  Sorry! ⛔ <br/>Please check the console for further details.</div>;
     }
 
+    if (loading) {
+        return <div className="loading">Loading information...</div>
+    }
+
     if (arrayOfBahamasFacts === null) {
-        return <div className="loading">Loading information...</div>;
+        return <div className="loading">The API failed to return any data. <br/> Please try again later</div>;
     }
 
   return (

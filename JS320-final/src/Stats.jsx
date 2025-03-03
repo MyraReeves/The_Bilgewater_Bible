@@ -7,6 +7,7 @@ import Ratings from "./Ratings";
 function Stats() {
     const [object, setObject] = useState(null);
     const [hasError, setHasError] = useState(false);
+    const [loading, setLoading] = useState(true);
 
     useEffect( () => {
         fetch('https://api.tvmaze.com/shows/182')
@@ -19,7 +20,12 @@ function Stats() {
             .catch( error => {
                 console.log('%cThe following error occured when attempting to fetch data from the API: \n', 'color: red; font-weight: bold; font-size: larger', error);
                 setHasError(true);
-            });
+            })
+
+            .finally( () => {
+              setLoading(false)
+            })
+
         }, []);
 
 
@@ -27,8 +33,12 @@ function Stats() {
         return <div className="error">⛔ An error occurred while fetching the information.  Sorry! ⛔ <br/>Please check the console for further details.</div>;
     }
 
+    if (loading) {
+        return <div className="loading">Loading information...</div>
+    }
+
     if (object === null) {
-        return <div className="loading">Loading information...</div>;
+        return <div className="loading">The API failed to return any data. <br/> Please try again later</div>;
     }
 
     const summaryFirstParagraph = object.summary.slice(3, 34);
