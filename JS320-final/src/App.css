@@ -383,11 +383,15 @@ main h1, .subheading {
  */
 
  .learning-dropdown {
-  width: 370px;
-  margin: 5px auto;
+  width: 35%;
+  margin: 0 auto;
   font-family: "Pirata One", serif;
   font-size: 20pt;
   /* border: 1px red solid; */
+ }
+
+ .learning-dropdown select {
+  padding-right: 7px;
  }
 
 .learning-dropdown button {
@@ -413,7 +417,7 @@ main h1, .subheading {
   border-top: dotted 1pt rgb(40, 39, 37);
   box-shadow: 0 0 20px 0.5px #e3dbd3b4;
   margin-top: 30px;
-  padding-bottom: 40px;
+  padding-bottom: 60px;
 }
 
 .Bahamas-facts {
@@ -454,6 +458,11 @@ main h1, .subheading {
   color: gold;
 }
 
+.library-of-congress-scans {
+  padding: 40px 0;
+  font-family: "Pirata One", serif;
+  color: rgb(169, 169, 169);
+}
 
 /*_______________________________________
 *************
@@ -483,9 +492,9 @@ main h1, .subheading {
 
 
 /*_______________________________________
-**************
-* LEARN MORE *
-**************
+**********
+* FOOTER *
+**********
 */
 footer {
   color: gray;
