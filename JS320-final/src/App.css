@@ -489,8 +489,10 @@ main h1, .subheading {
 */
 footer {
   color: gray;
-  margin-top: 30px;
+  margin-top: 3000px;
   bottom: 0;
-  position: absolute;
+  position: relative;
   display: block;
+  width: 100%;
+  text-align: center;
 }
