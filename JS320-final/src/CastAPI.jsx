@@ -1,11 +1,10 @@
 // This file maps an array of objects given by the API, in order to generate a visual list on the screen of each actor's photo, name, birthdate, and who they portrayed on the show.
 
 import { useEffect, useState } from "react"
-import PropTypes from "prop-types";
 
-function CastAPI(props) {
+function CastAPI() {
     const [arrayOfcastMembers, setArrayOfcastMembers] = useState([]);
-    const {hasError, setHasError} = props;
+    const [hasError, setHasError] = useState(false);
 
     const ifNoBirthday = (birthday) => {
         if (birthday == null){
@@ -74,11 +73,6 @@ function CastAPI(props) {
 
     </main>
   )
-}
-
-CastAPI.propTypes = {
-    hasError: PropTypes.bool.isRequired,
-    setHasError: PropTypes.func.isRequired,
 }
 
 export default CastAPI
