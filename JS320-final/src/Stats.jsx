@@ -2,12 +2,11 @@
 
 import { useEffect, useState } from "react";
 import { Link } from 'react-router-dom'
-import PropTypes from "prop-types";
 import Ratings from "./Ratings";
 
-function Stats(props) {
+function Stats() {
     const [object, setObject] = useState(null);
-    const {hasError, setHasError} = props;
+    const [hasError, setHasError] = useState(false);
 
     useEffect( () => {
         fetch('https://api.tvmaze.com/shows/182')
@@ -21,7 +20,7 @@ function Stats(props) {
                 console.log('%cThe following error occured when attempting to fetch data from the API: \n', 'color: red; font-weight: bold; font-size: larger', error);
                 setHasError(true);
             });
-        }, [setHasError]);
+        }, []);
 
 
     if (hasError) {
@@ -110,11 +109,6 @@ function Stats(props) {
         </div>
     </main>
   )
-}
-
-Stats.propTypes = {
-    hasError: PropTypes.bool.isRequired,
-    setHasError: PropTypes.func.isRequired,
 }
 
 export default Stats
