@@ -10,8 +10,8 @@ function Homepage() {
     return (
         <main>
             <div className="greeting">
-                <h2>Welcome to Governor Augustus Featherstone's Complete and Accurate, Totally Fictional <br/>Journal of Who's Who in Nassau Town Circa 1715.</h2> 
-                <p>Here-in lies an account of flibustiers, buccaneers, freebooters, maroons, privateers, and the occassional jungaless. <br/> Dis ting go with sense and keep yer wits about ye. For there is no peace beyond the line!</p>
+                <h2>Welcome to Governor Augustus Featherstone&apos;s Incomplete and Accurate, Totally Fictional <br/>Journal of Who&apos;s Who in Nassau Town Circa 1715.</h2> 
+                <p>Here-in lies an account of flibustiers, buccaneers, freebooters, maroons, privateers, and the occassional jungaless/termagant. <br/> Dis ting go with sense and keep yer wits about ye. For there is no peace beyond the line!</p>
             </div>
 
             <EpisodeList/>
