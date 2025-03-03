@@ -1,12 +1,11 @@
 // This file maps an array of objects given by the API, in order to generate a visual list on the screen of the characters in the show.
 
 import { useEffect, useState } from "react"
-import PropTypes from "prop-types";
 // import { Link } from 'react-router-dom'
 
-function CharacterList(props) {
+function CharacterList() {
     const [arrayOfcharacters, setArrayOfCharacters] = useState([]);
-    const {hasError, setHasError} = props;
+    const [hasError, setHasError] = useState(false);
 
     useEffect( () => {
         fetch('https://api.tvmaze.com/shows/182/cast')
@@ -21,7 +20,7 @@ function CharacterList(props) {
                 console.log('%cThe following error occured when attempting to fetch data from the API: \n', 'color: red; font-weight: bold; font-size: larger', error);
                 setHasError(true);
             });
-        });
+        }, []);
 
 
     if (hasError) {
@@ -64,11 +63,6 @@ function CharacterList(props) {
             </div>
         </main>
     )
-}
-
-CharacterList.propTypes = {
-    hasError: PropTypes.bool.isRequired,
-    setHasError: PropTypes.func.isRequired,
 }
 
 export default CharacterList
