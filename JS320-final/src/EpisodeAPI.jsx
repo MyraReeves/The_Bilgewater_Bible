@@ -40,7 +40,10 @@ function EpisodeList() {
     if (arrayOfEpisodes === null) {
         return <div className="loading">The API failed to return any data. <br/> Please try again later</div>;
     }
-      
+
+    // Deletes the internal <p> tags (between "forever." and "Series") inside of the final episode's summary and re-orders wording:
+    arrayOfEpisodes[37].summary = "<p>Series Finale:  Flint makes one last push to topple England. Silver seals his fate. Rackham confronts Rogers. Nassau is changed forever.</p>"
+
   
     return (
         <div className="episodes">
