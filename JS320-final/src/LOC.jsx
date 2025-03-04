@@ -8,7 +8,7 @@ function LibraryOfCongressAPI({referenceURL}) {
     const [loading, setLoading] = useState(true);
 
     useEffect( () => {
-        fetch(`https://www.loc.gov/${referenceURL}&fo=json`)
+        fetch(`https://www.locc.gov/${referenceURL}&fo=json`)
 
             .then( response => response.json() )
 
@@ -29,7 +29,7 @@ function LibraryOfCongressAPI({referenceURL}) {
 
 
     if (hasError) {
-        return <div><p className="error">⛔ An error occurred while fetching the information.  Sorry! ⛔ <br/><br/><br/>The Library of Congress server is prone to crashing due to traffic overload and recent U.S. government cuts. <br/> Please wait a moment and then try again.</p></div>;
+        return <div><p className="error">⛔ An error occurred while fetching the information.  Sorry! ⛔ <br/><br/><br/>The Library of Congress server is prone to crashing due to traffic overload and recent U.S. government cuts. <br/> Please wait a moment and try again.<br/><span className="LOC-download"><br/>If the problem persists, a PDF version of the text can be downloaded directly from the <a href="https://www.loc.gov/" target="_blank" rel="noopener noreferrer">Library of Congress website.</a></span></p></div>;
     }
 
     if (loading) {
