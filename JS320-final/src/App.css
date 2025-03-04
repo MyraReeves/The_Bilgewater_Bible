@@ -113,6 +113,9 @@ main h1, .subheading {
   font-size: 30pt;
 }
 
+.LOC-loading {
+  font-size: 14pt;
+}
 
 /*_______________________________________
 ************
@@ -207,7 +210,6 @@ main h1, .subheading {
   float: right;
   font-family: serif;
 }
-
 
 .watch-on {
   text-align: center;
@@ -387,7 +389,6 @@ main h1, .subheading {
   margin: 0 auto;
   font-family: "Pirata One", serif;
   font-size: 20pt;
-  /* border: 1px red solid; */
  }
 
  .learning-dropdown select {
