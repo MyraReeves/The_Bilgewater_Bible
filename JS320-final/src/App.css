@@ -477,6 +477,8 @@ main h1, .subheading {
 
 .library-of-congress-scans h4 {
   margin: 0 0 5px 0;
+  font-family: "Caveat", serif;
+  font-size: 15pt;
 }
 
 .pages {
