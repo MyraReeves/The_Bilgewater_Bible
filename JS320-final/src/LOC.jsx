@@ -29,18 +29,18 @@ function LibraryOfCongressAPI({referenceURL}) {
 
 
     if (hasError) {
-        return <div className="error">⛔ An error occurred while fetching the information.  Sorry! ⛔ <br/>Please check the console for further details.</div>;
+        return <div><p className="error">⛔ An error occurred while fetching the information.  Sorry! ⛔ <br/><br/><br/>The Library of Congress server is prone to crashing due to traffic overload and recent U.S. government cuts. <br/> Please wait a moment and then try again.</p></div>;
     }
 
     if (loading) {
-        return <div className="loading">Loading information...</div>
+        return <div><p className="loading">Loading information... <br/><span className="LOC-loading">The Library of Congress API server moves slowly sometimes. Thank you for your patience.<br/><br/>If an error message appears after this loading screen, please refresh your browser and try again. Their API <strong><em>is</em></strong> CORS-compliant!</span></p></div>
     }
 
     if (historicalDocument === null) {
         return <div className="loading">The API failed to return any data. <br/> Please try again later</div>;
     }
 
-    console.log(historicalDocument)
+    // console.log(historicalDocument)
 
   return (
     <div className="library-of-congress-scans">
