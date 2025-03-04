@@ -42,12 +42,19 @@ function LibraryOfCongressAPI({referenceURL}) {
         return <div className="loading">The API failed to return any data. <br/> Please try again later</div>;
     }
 
-    console.log(historicalDocument)
+    // Conditionals to handle the two books with title page image errors:
+    if (referenceURL == 'resource/rbc0001.2019gen31667/?st=gallery&c=180'){
+        historicalDocument.item.image_url = 'https://tile.loc.gov/image-services/iiif/service:rbc:rbc0001:2019:2019gen31667:0009/full/pct:25/0/default.jpg#h=639&w=389'
+    }
+    if (referenceURL == 'resource/gdcscd.00413141047/?st=gallery&c=178'){
+        historicalDocument.item.image_url = 'https://tile.loc.gov/image-services/iiif/service:gdc:gdcscd:00:41:31:41:04:7:00413141047:0005/full/pct:25/0/default.jpg#h=628&w=453'
+    }
 
-    // Function to handle toggling between an enlarged versus a small image of the book's page
+    // Function to toggle between an enlarged versus a small image of the book's page
     const handleClick = (index) => {
         setImageToResize((previous) => (previous === index ? null : index));
       };
+
 
   return (
     <div className="library-of-congress-scans">
