@@ -113,6 +113,10 @@ main h1, .subheading {
   font-size: 30pt;
 }
 
+.LOC-download {
+  font-size: 12pt;
+}
+
 .LOC-loading {
   font-size: 14pt;
 }
