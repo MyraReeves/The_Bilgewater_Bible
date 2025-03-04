@@ -7,8 +7,10 @@ function LibraryOfCongressAPI({referenceURL}) {
     const [hasError, setHasError] = useState(false);
     const [loading, setLoading] = useState(true);
 
+    const [imageToResize, setImageToResize] = useState(null);
+
     useEffect( () => {
-        fetch(`https://www.locc.gov/${referenceURL}&fo=json`)
+        fetch(`https://www.loc.gov/${referenceURL}&fo=json`)
 
             .then( response => response.json() )
 
@@ -40,52 +42,33 @@ function LibraryOfCongressAPI({referenceURL}) {
         return <div className="loading">The API failed to return any data. <br/> Please try again later</div>;
     }
 
-    // console.log(historicalDocument)
+    console.log(historicalDocument)
+
+    // Function to handle toggling between an enlarged versus a small image of the book's page
+    const handleClick = (index) => {
+        setImageToResize((previous) => (previous === index ? null : index));
+      };
 
   return (
     <div className="library-of-congress-scans">
         <p>Courtesy of the <a href={historicalDocument.item.aka[1]} target="_blank" rel="noopener noreferrer">U.S. Library of Congress</a></p>
-        <img src={historicalDocument.item.image_url[0]} alt="Title page of the book"/>
-        {/* {historicalDocument.map( (eachFact, index) => (
-            <div key={index} className="Bahamas-facts">
-                <h2> {eachFact.name.official} </h2>
-                <img src = {eachFact.flags.png} alt = {eachFact.flags.alt} className="flag"/> &emsp; &emsp; <img src = {eachFact.coatOfArms.png} alt = 'The Bahamian coat of arms consists of a marlin and flamingo supporting a shield on which there is a ship sailing underneath the sun. Above the shield is a conch shell, and beneath the shield is the national motto.' className="flag"/> <br/>
-                <table>
-                    <tbody className="table-align-left">
-                    <tr>
-                        <td className="teal">Currency:</td>
-                        <td className="teal">{eachFact.currencies.BSD.name} & {eachFact.currencies.USD.name}</td>
-                    </tr>
-                    <tr>
-                        <td className="teal">Time Zone:</td>
-                        <td className="teal">{eachFact.timezones}</td>
-                    </tr>
-                    <tr>
-                        <td className="yellow">Population Size as of 2020:</td>
-                        <td className="yellow">{eachFact.population}</td>
-                    </tr>
-                    <tr>
-                        <td className="yellow">Official language:</td>
-                        <td className="yellow">{eachFact.languages.eng}</td>
-                    </tr>
-                    <tr>
-                        <td className="teal">Capital:</td>
-                        <td className="teal">{eachFact.capital}</td>
-                    </tr>
-                    <tr>
-                        <td className="teal">Global Coordinates of Nassau:</td>
-                        <td className="teal">{eachFact.capitalInfo.latlng[0]} north of the equator, {eachFact.capitalInfo.latlng[1]} west of the prime meridian</td>
-                    </tr>
-                    <tr>
-                        <td className="yellow">Total Area (including water):</td>
-                        <td className="yellow">{eachFact.area} square kilometers</td>
-                    </tr>
-                    </tbody>
-                </table>
-                <img src = {NassauMap} alt = 'Map of the Bahama islands'/>
-            </div>
-        ))
-        } */}
+        <img src={historicalDocument.item.image_url} alt="Title page of the book"/>
+
+        <h3>Click any page below to open a larger version of it for reading</h3>
+        <h4>Note: Clicking another page will return the page you have just finished reading back to its original small size</h4>
+        <div className="pages">
+            {historicalDocument.segments.map( (eachPage, index) => (
+                <div key = {index}>
+                    <img
+                        src={ imageToResize === index ? eachPage.image_url[2] : eachPage.image_url[0] }
+                        alt="A page of the book"
+                        className={imageToResize === index ? "large-page" : "small-page"}  //Makes the class dynamic
+                        onClick={() => handleClick(index)}
+                    />
+                </div>
+            ))}
+        </div>
+        <p><a href={historicalDocument.resource.pdf} target="blank" rel="noopener noreferrer">🔗 Download a pdf of this book here 🔗</a></p>
     </div>
   )
 }
