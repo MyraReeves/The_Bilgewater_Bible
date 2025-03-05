@@ -59,8 +59,7 @@ function CharacterList() {
   
     return (
         <main>
-            <h1>☠️ <span className="underline">Main Characters</span> ☠️</h1>
-            <div className="subheading">(In alphabetical order)</div>
+            <h1>☠️ <span className="underline">Characters</span> ☠️</h1>
             <div className="centered">
                 {arrayOfcharacters.map( (eachCharacter, index) => (
                     <div key={index} className="character-list">
