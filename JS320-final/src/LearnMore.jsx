@@ -53,6 +53,10 @@ function LearnMore() {
             return <div className="box-shadow"> <LibraryOfCongressAPI referenceURL= 'resource/gdcmassbookdig.buccaneersinwest00hari/?st=gallery&c=352' /> </div>
         }
 
+        // 1883 edition: "Treasure Island"
+        if (selection == 'treasureIsland'){
+            return <div className="box-shadow"> <LibraryOfCongressAPI referenceURL= 'resource/rbc0001.2022rosen2065/?st=gallery&c=317' /> </div>
+        }
     }
 
   
