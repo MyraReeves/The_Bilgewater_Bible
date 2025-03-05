@@ -35,14 +35,16 @@ function LibraryOfCongressAPI({referenceURL}) {
     }
 
     if (loading) {
-        return <div><p className="loading">Loading information... <br/><span className="LOC-loading">The Library of Congress API server moves slowly sometimes. Thank you for your patience.<br/><br/>If an error message appears after this loading screen, please refresh your browser and try again. Their API <strong><em>is</em></strong> CORS-compliant!</span></p></div>
+        return <div><p className="loading">Loading... <br/><span className="LOC-loading">The Library of Congress API server moves slowly sometimes. Thank you for your patience.<br/><br/>If an error message appears after this loading screen, please refresh your browser and try again. Their API <strong><em>is</em></strong> CORS-compliant!</span></p></div>
     }
 
     if (historicalDocument === null) {
         return <div className="loading">The API failed to return any data. <br/> Please try again later</div>;
     }
 
-    // Conditionals to handle the two books with title page image errors:
+
+
+    // Conditionals to handle the books containing title page image errors:
     if (referenceURL == 'resource/rbc0001.2019gen31667/?st=gallery&c=180'){
         historicalDocument.item.image_url = 'https://tile.loc.gov/image-services/iiif/service:rbc:rbc0001:2019:2019gen31667:0009/full/pct:25/0/default.jpg#h=639&w=389'
     }
@@ -50,6 +52,11 @@ function LibraryOfCongressAPI({referenceURL}) {
         historicalDocument.item.image_url = 'https://tile.loc.gov/image-services/iiif/service:gdc:gdcscd:00:41:31:41:04:7:00413141047:0005/full/pct:25/0/default.jpg#h=628&w=453'
     }
 
+    if (referenceURL == 'resource/rbc0001.2022rosen2065/?st=gallery&c=317'){
+        historicalDocument.item.image_url = 'https://tile.loc.gov/image-services/iiif/service:rbc:rbc0001:2022:2022rosen2065:0012/full/pct:25/0/default.jpg#h=814&w=559'
+    }
+
+    
     // Function to toggle between an enlarged versus a small image of the book's page
     const handleClick = (index) => {
         setImageToResize((previous) => (previous === index ? null : index));
