@@ -21,6 +21,11 @@ function LearnMore() {
             return <div className="box-shadow"> <BahamasInfo/> </div>
         }
 
+        // 1681 Spanish book: "Piratas de la America : y luz à la defensa de las costas de Indias Occidentales"
+        if (selection == 'spanishAccount'){
+            return <div className="box-shadow"> <LibraryOfCongressAPI referenceURL = 'resource/rbc0001.2005gen17970/?st=gallery&c=417'/> </div>
+        }
+
         // 1725 book: "The history and lives of all the most notorious pirates, and their crews, from Capt. Avery, who first settled at Madagascar, to Capt. John Gow, and James Williams, his Lieutenant, Etc. who were hang'd at Execution Dock, June 11, 1725, for Piracy and Murther, and afterwards hang'd in Chains between Blackwall and Deptford"
         if (selection == 'notoriousPirates'){
             return <div className="box-shadow"> <LibraryOfCongressAPI referenceURL = 'resource/rbc0001.2019gen31667/?st=gallery&c=180'/> </div>
