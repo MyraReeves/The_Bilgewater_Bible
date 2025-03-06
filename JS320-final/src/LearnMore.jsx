@@ -23,6 +23,11 @@ function LearnMore() {
             return <div className="box-shadow"> <LibraryOfCongressAPI referenceURL = 'resource/rbc0001.2019gen31667/?st=gallery&c=180'/> </div>
         }
 
+        // 1816 book:  History of the buccaneers of America
+        if (selection == 'buccaneersAmerica'){
+            return <div className="box-shadow"> <LibraryOfCongressAPI referenceURL = 'resource/gdcmassbookdig.historyofbuccane00burn/?st=gallery&c=360'/> </div>
+        }
+
         // 1829 book: "The History of the pirates, containing the lives of those noted pirate captains, Misson, Bowen, Kidd, Tew, Halsey, White, Condent, Bellamy, Fly, Howard, Lewis, Cornelius, Williams, Gurgess, North, and their several crews, also, an account of the piracies and cruelties of John Auger, William Cunningham, Dennis MacCarthy, William Lewis, Thomas Morris, George Bendall, and William Ling, who were tried, condemned, and executed at Nassau, New Providence, on the tenth of December 1718, to which is added the correct account of the late piracies committed in the West Indes; and the expedition of Commodore Porter"
         if (selection == 'pirateCaptains'){
             return <div className="box-shadow"> <LibraryOfCongressAPI referenceURL = 'resource/gdcmassbookdig.historyofpirates01care/?st=gallery&c=294'/> </div>
