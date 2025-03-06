@@ -14,11 +14,12 @@ function LearningDropdownMenu(props) {
   return (
     <div className="learning-dropdown">
         <form onSubmit={handleSubmit}>
-            <label htmlFor="learning-choices">Choose which option you would like to read: </label><br/>
+            <label htmlFor="learning-choices">Choose an option to read: </label><br/>
             <select name="learningLibrary" id="learning-choices" onChange={handleSelection} value={selection}>
                 <option disabled> </option>
                 <option value="bahamas">🌎 Learn more about the Bahamas</option>
                 <option disabled>  </option>
+                <option value="spanishAccount">📔1681 book ✴️written in Spanish✴️ - &#34;Piratas de la America&#34; </option>
                 <option value="notoriousPirates">📕1725 book - &#34;The History and Lives of All the Most Notorious Pirates and Their Crews&#34;</option>
                 <option value="buccaneersAmerica">📗1816 book - &#34;History of the Buccaneers of America&#34;</option>
                 <option value="pirateCaptains">📙1829 book - &#34;History of [...] Pirate Captains [...] Tried, Condemned, and Executed at Nassau on 10 of December 1718&#34;</option>
@@ -30,7 +31,6 @@ function LearningDropdownMenu(props) {
                 <option disabled> </option>
                 <option value="treasureIsland">📖 Young Adult Fiction - Original 1883 edition of &#34;Treasure Island&#34;</option>
         </select>
-        {/* <input type="submit" value="Submit"/> */}
         </form>
     </div>
   )
