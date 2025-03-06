@@ -11,7 +11,10 @@ function LearnMore() {
 
     const checkForSelection = () => {
         if (selection == ''){
-            return <img src={ships} alt='Image of two full-rigged ships on rough seas, one a long distance in front of the other' className="nothing-selected"/> 
+            return <>
+                <p className="warning">** The veracity of historical books about pirates (such as the books available to read here) has been strongly challenged by historians. No records exist to support many of the claims made in these books, untraceable pen names were used in some cases by the authors, and much of their content seems to have been designed purely to entertain the public.</p>
+                <img src={ships} alt='Image of two full-rigged ships on rough seas, one a long distance in front of the other' className="nothing-selected"/>
+            </> 
         }
 
         if (selection == 'bahamas'){
@@ -67,6 +70,10 @@ function LearnMore() {
   
     return (
         <main>
+            <div className="story-quote">
+                <h1>&#34;A story is true; a story is untrue. As time extends, it matters less and less. <br/>The stories we want to believe are the ones that survive, despite upheaval and transition and progress. <br/>Those are the stories that shape history.&#34;</h1>
+                <p>- Season 4, finale</p>
+            </div>
             <LearningDropdownMenu 
                 selection={selection} 
                 setSelection={setSelection} 
