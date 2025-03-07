@@ -346,7 +346,7 @@ main h1, .subheading {
   display: inline-block;
 }
 
-.cast-list p, .cast-list h2 {
+.cast-list p {
   margin: 0;
 }
 
@@ -356,6 +356,11 @@ main h1, .subheading {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  margin: 0;
+}
+
+.character-index {
+  margin: -65px 0 10px 0;
 }
 
 .cast-list .info {
@@ -364,6 +369,9 @@ main h1, .subheading {
 
 .character-list img {
   border: solid rgb(255, 77, 0) 1px;
+  height: 310px;
+  width: 210px;
+  margin-top: 0;
 }
 
 
