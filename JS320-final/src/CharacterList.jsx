@@ -1,7 +1,8 @@
-// This file maps an array of objects given by the API, in order to generate a visual list on the screen of the characters in the show.
-
-import { useEffect, useState } from "react"
-// import { Link } from 'react-router-dom'
+// This file maps an array of objects given by a Firebase collection, in order to generate a clickable visual list of the characters in the tv show. When clicked on, each displayed character will take the user to an info page about that character.
+import { useEffect, useState } from "react";
+import database from './db';
+import { collection, getDocs } from "firebase/firestore";
+import { Link } from 'react-router-dom';
 
 function CharacterList() {
     const [arrayOfcharacters, setArrayOfCharacters] = useState([]);
@@ -9,66 +10,45 @@ function CharacterList() {
     const [loading, setLoading] = useState(true);
 
     useEffect( () => {
-        fetch('https://api.tvmaze.com/shows/182/cast')
 
-            .then( response => response.json() )
-
-            .then( objectArrayInsideResponse => {
-                setArrayOfCharacters(objectArrayInsideResponse);
-            })
-
-            .catch( error => {
-                console.log('%cThe following error occured when attempting to fetch data from the API: \n', 'color: red; font-weight: bold; font-size: larger', error);
-                setHasError(true);
-            })
-
-            .finally( () => {
-              setLoading(false)
-            })
-
-        }, []);
+        const getData = async () => {
+            try {
+                // See Firestore Docs @ https://firebase.google.com/docs/firestore/query-data/get-data 
+                const querySnapshot = await getDocs(collection(database, "pirate-info"));
+                setArrayOfCharacters(querySnapshot.docs)
+            }
+            catch {(error) => {
+                    console.log('%cThe following error occured when attempting to fetch data from the API: \n', 'color: red; font-weight: bold; font-size: larger', error);
+                    setHasError(true);
+                }
+            }
+            finally {
+                setLoading(false)
+            }
+        } 
+        getData()
+      
+    }, [])
 
 
     if (hasError) {
         return <div className="error">⛔ An error occurred while fetching the information.  Sorry! ⛔ <br/>Please check the console for further details.</div>;
     }
-
     if (loading) {
         return <div className="loading">Loading information...</div>
     }
 
-    if (arrayOfcharacters === null) {
-        return <div className="loading">The API failed to return any data. <br/> Please try again later</div>;
-    }
-
-    // Sort the array into alphabetical order:
-    arrayOfcharacters.sort(
-        function(object1, object2) {
-            if (object1.character.name < object2.character.name) {
-                return -1;
-            }
-            if (object1.character.name > object2.character.name) {
-                return 1;
-            }
-            else {
-                return 0;
-            }
-        }
-    );
-      
   
     return (
-        <main>
-            <h1>☠️ <span className="underline">Characters</span> ☠️</h1>
+        <main style={{margin: '125px 0 10px 0'}}>
+            <h1>🕱 <span className="underline">Main Characters</span> 🕱</h1><br/>
             <div className="centered">
-                {arrayOfcharacters.map( (eachCharacter, index) => (
-                    <div key={index} className="character-list">
-                        <h2> {eachCharacter.character.name} </h2>
-                        <img src = {eachCharacter.character.image.medium} alt = 'Photo of the character'/> <br/>
-                        <a href={eachCharacter.character.url} target="_blank" rel="noopener noreferrer">🔗 TV Maze description</a>
+                {arrayOfcharacters.map ( (eachCharacter) => {
+                    return <div key={eachCharacter.id} className="character-list">
+                        <h2> {eachCharacter.data().indexName} </h2>
+                        <img src = {eachCharacter.data().image} alt = {eachCharacter.data().altText} />
                     </div>
-                ))
-                }
+                })}
             </div>
         </main>
     )
