@@ -1,4 +1,4 @@
-// This file maps an array of objects given by a Firebase collection, in order to generate a clickable visual list of the characters in the tv show. When clicked on, each displayed character will take the user to an info page about that character.
+// This file maps an array of objects given by a Firebase collection ("characters"), in order to generate a clickable visual list of the characters in the tv show. When clicked on, each displayed character will take the user to an info page about that character.
 import { useEffect, useState } from "react";
 import database from './db';
 import { collection, getDocs } from "firebase/firestore";
@@ -15,7 +15,7 @@ function CharacterList() {
         const getData = async () => {
             try {
                 // See Firestore Docs @ https://firebase.google.com/docs/firestore/query-data/get-data 
-                const querySnapshot = await getDocs(collection(database, "pirate-info"));
+                const querySnapshot = await getDocs(collection(database, "characters"));
                 setArrayOfCharacters(querySnapshot.docs)
             }
             catch {(error) => {
