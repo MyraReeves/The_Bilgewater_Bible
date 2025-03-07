@@ -2,12 +2,13 @@
 import { useEffect, useState } from "react";
 import database from './db';
 import { collection, getDocs } from "firebase/firestore";
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'
 
 function CharacterList() {
     const [arrayOfcharacters, setArrayOfCharacters] = useState([]);
     const [hasError, setHasError] = useState(false);
     const [loading, setLoading] = useState(true);
+    const navigate = useNavigate()
 
     useEffect( () => {
 
@@ -40,11 +41,11 @@ function CharacterList() {
 
   
     return (
-        <main style={{margin: '125px 0 10px 0'}}>
+        <main style={{margin: '135px 0 10px 0'}}>
             <h1>🕱 <span className="underline">Main Characters</span> 🕱</h1><br/>
             <div className="centered">
                 {arrayOfcharacters.map ( (eachCharacter) => {
-                    return <div key={eachCharacter.id} className="character-list">
+                    return <div key={eachCharacter.id} className="character-list" onClick={() => navigate(eachCharacter.id)}>
                         <h2> {eachCharacter.data().indexName} </h2>
                         <img src = {eachCharacter.data().image} alt = {eachCharacter.data().altText} />
                     </div>
