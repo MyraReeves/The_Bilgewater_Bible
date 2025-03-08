@@ -42,6 +42,9 @@ function BlackSailsCharacters({characterID}) {
 
   // Pirates should return slightly different, longer text than other characters.  If !pirate return
   // "{name} is a fictitious character created for the show. {Pronoun} is {height} {nationality} {gender} with {hair} hair and {eyes} eyes."
+  if (!character.pirate){
+    return <div className="loading" style={{backgroundColor: "black"}}><p><br/><br/><br/>🔨 ⚙️ 🪚 ⚙️ 🔧 <br/><br/>🚧 Page under construction 🚧<br/><br/>🏗️</p></div>
+  }
 
   return (
     <div>
