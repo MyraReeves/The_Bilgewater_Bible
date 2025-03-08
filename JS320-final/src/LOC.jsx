@@ -42,6 +42,9 @@ function LibraryOfCongressAPI({referenceURL}) {
 
 
     // Conditionals to handle the books containing title page image errors:
+    if(referenceURL == 'resource/rbc0001.2019gen63650/?st=gallery&c=40'){
+        historicalDocument.item.image_url = "https://tile.loc.gov/image-services/iiif/service:rbc:rbc0001:2019:2019gen63650:00010000/full/pct:25/0/default.jpg#h=631&w=459"
+    }
     if(referenceURL == 'resource/rbc0001.2005gen17970/?st=gallery&c=417'){
         historicalDocument.item.image_url = "https://tile.loc.gov/image-services/iiif/service:rbc:rbc0001:2005:2005gen17970:0010/full/pct:25/0/default.jpg#h=572&w=430"
     }
