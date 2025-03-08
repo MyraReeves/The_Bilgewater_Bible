@@ -1,4 +1,4 @@
-// This file uses the "characters" collection database inside my Firebase app to display information about each requested character's information onto the screen (via an id prop that is passed in).
+// This file uses the characters ("pirate-info") collection database inside my Firebase app to display information about each requested character's information onto the screen (via an id prop that is passed in).
 import PropTypes from "prop-types"
 import { useEffect, useState } from "react"
 import database from './db';
@@ -16,7 +16,6 @@ function BlackSailsCharacters({characterID}) {
         const docSnap = await getDoc(docRef);
 
         if (docSnap.exists()) {
-          console.log("Document data:", docSnap.data().name);
           setCharacter(docSnap.data())
         } else {
           console.log("No such document!");
@@ -34,8 +33,6 @@ function BlackSailsCharacters({characterID}) {
 
   }, [characterID])
 
-  console.log(character)
-
   if (hasError) {
     return <div className="error">⛔ An error occurred.  Sorry! ⛔ <br/>Please check the console for further details.</div>;
   }
@@ -48,7 +45,6 @@ function BlackSailsCharacters({characterID}) {
 
   return (
     <div>
-
       <div className="with-photo">
         <img src={character.image} alt={character.altText}/>
         <h1 className="underline">{character.name}</h1>
@@ -66,7 +62,6 @@ function BlackSailsCharacters({characterID}) {
         <p className="indent"> {character.inOtherSources[1]} </p>
         <p className="indent"> {character.inOtherSources[2]} </p>
       </div>
-
     </div>
   )
 }
