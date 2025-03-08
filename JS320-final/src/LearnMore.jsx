@@ -26,6 +26,11 @@ function LearnMore() {
             return <div className="box-shadow"> <LibraryOfCongressAPI referenceURL = 'resource/rbc0001.2005gen17970/?st=gallery&c=417'/> </div>
         }
 
+        // 1694 book: "Forma de assegurar los puertos y poblaciones de todas las costas de las Indias: Aviendo prevenido en el papel antecedente la mejor forma de assegurar los puertos y poblaciones de todas las costas de las Indias Facturias que dichas naciones tienen en las islas de Barlobento son como se sigue A viendo entendido la materia que se controvierte Habiendo entendido la materia que controvierte sobre si se deben fortificar la boca del río de la ensenada del Darién, y el desembarcadero del playón en el paraje de los cayos de las Cabezas, para estorbar a los piratas el poder pasar a las costas del Perú"
+        if (selection == 'spanishRecommendations'){
+            return <div className="box-shadow"> <LibraryOfCongressAPI referenceURL = 'resource/rbc0001.2019gen63650/?st=gallery&c=40'/> </div>
+        }
+
         // 1725 book: "The history and lives of all the most notorious pirates, and their crews, from Capt. Avery, who first settled at Madagascar, to Capt. John Gow, and James Williams, his Lieutenant, Etc. who were hang'd at Execution Dock, June 11, 1725, for Piracy and Murther, and afterwards hang'd in Chains between Blackwall and Deptford"
         if (selection == 'notoriousPirates'){
             return <div className="box-shadow"> <LibraryOfCongressAPI referenceURL = 'resource/rbc0001.2019gen31667/?st=gallery&c=180'/> </div>
