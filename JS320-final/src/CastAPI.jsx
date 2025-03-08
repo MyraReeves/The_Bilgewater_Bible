@@ -38,11 +38,9 @@ function CastAPI() {
     if (hasError) {
         return <div className="error">⛔ An error occurred while fetching the information.  Sorry! ⛔ <br/>Please check the console for further details.</div>;
     }
-
     if (loading) {
         return <div className="loading">Loading information...</div>
     }
-
     if (arrayOfcastMembers === null) {
         return <div className="loading">The API failed to return any data. <br/> Please try again later</div>;
     }
@@ -65,7 +63,7 @@ function CastAPI() {
 
   return (
     <main>
-        <h1>☠️ <span className="underline">Cast Members</span> ☠️</h1>
+        <h1>🕱 <span className="underline">Cast Members</span> 🕱</h1>
         <div className="subheading">(In alphabetical order of their first names)</div>
         <div className="centered">
             {arrayOfcastMembers.map( (eachCastMember, index) => (
@@ -79,8 +77,6 @@ function CastAPI() {
                 ))
             }
         </div>
-
-
     </main>
   )
 }
