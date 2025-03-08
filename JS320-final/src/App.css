@@ -128,13 +128,16 @@ main h1, .subheading {
 */
 .greeting {
   font-family: "Caveat", serif;
-  margin: 0 50px 60px 50px;
+  margin: -10px 50px 100px 50px;
   text-align: center;
+  line-height: 1;
 }
 
 .greeting h2 {
   margin: 0;
-  font-size: 28pt;
+  font-size: 32pt;
+  word-spacing: 3px;
+  margin-bottom: 15px;
   background: radial-gradient(circle, rgb(80, 52, 3), brown, rgb(103, 69, 11), brown, rgb(80, 52, 3) 100%);
   -webkit-background-clip: text;
   background-clip: text;
@@ -155,23 +158,28 @@ main h1, .subheading {
   border: 4px dotted brown;
   margin: 0 0 100px 30px;
   text-align: center;
-  padding: 15px 10px 30px 10px;
+  padding: 15px 10px 20px 10px;
   width: 800px;
   color: darkgrey;
 }
 
 .homepagePreviews {
-  font-family: serif;
-  font-size: 25pt;
+  font-family: "Pirata One", serif;
+  font-size: 40pt;
   font-weight: bold;
   margin-top: 0;
   margin-bottom: 10px;
+  background: radial-gradient(circle, darkgray, rgb(60, 60, 60), darkgray, rgb(61, 63, 63), darkgray, rgb(59, 59, 59), darkgray 10%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .release-dates {
   margin-top: 0;
-  font-family: serif;
-  font-size: 14pt;
+  font-family: "Pirata One", serif;
+  font-size: 18pt;
+  line-height: 1.2;
   margin-bottom: 30px;
 }
 
@@ -187,32 +195,36 @@ main h1, .subheading {
 .episodes h1 {
   font-size: 20pt;
   text-decoration: underline;
+  color: darkgray;
 }
 
 .episode-info {
   display: block;
-  margin: 5px 0 7px 0;
+  margin: 2px 0 8px 0;
 }
 
 .episode-info h2 {
   font-family: "Pirata One", serif;
   font-size: 12pt;
   margin: 0;
+  padding: 0;
 }
 
 .episode-info td img {
   float: left;
+  height: 100%;
   width: 100px;
-  margin: 1px 10px 1px 0;
+  margin: 0 10px 0 0;
 }
 
 .episode-info td {
-  font-size: 10pt;
+  font-size: 9pt;
 }
 
 .episode-info td .floatRight {
   float: right;
-  font-family: serif;
+  font-family: "Special Elite";
+  word-spacing: 1.5px;
 }
 
 .watch-on {
@@ -224,7 +236,7 @@ main h1, .subheading {
 
 .opening-titles {
   text-align: center;
-  margin-top: 400px;
+  margin-top: 350px;
 }
 
 
@@ -336,22 +348,24 @@ main h1, .subheading {
 
 /*_______________________________________
 ******************************
-* CAST PAGE & CHARACTER PAGE *
+* CAST PAGE & CHARACTER LIST *
 ******************************
  */
 .cast-list, .character-list {
   color: #996515;
-  margin: 30px;
+  margin: 40px 30px;
   text-align: center;
   display: inline-block;
 }
 
 .cast-list p {
   margin: 0;
+  font-family: "Special Elite";
 }
 
 .cast-list h2, .character-list h2 {
   font-weight: bold;
+  font-size: 18pt;
   background: linear-gradient(to top, red, yellow);
   -webkit-background-clip: text;
   background-clip: text;
@@ -365,15 +379,94 @@ main h1, .subheading {
 
 .cast-list .info {
   color: #e9ad53;
+  font-family: "Special Elite";
 }
 
 .character-list img {
   border: solid rgb(255, 77, 0) 1px;
-  height: 310px;
-  width: 210px;
+  height: 350px;
+  width: 220px;
+  object-fit: cover;
   margin-top: 0;
 }
 
+
+/*_______________________________________
+************************
+* CHARACTER INFO PAGES *
+************************
+ */
+.character-info {
+  color: tan;
+  width: 80%;
+  margin: 0 auto 50px auto;
+}
+
+.character-info h1 {
+  text-align: center;
+  background: linear-gradient(to top, red, yellow);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin: 20px 0 0 0;
+}
+
+.character-info img {
+  height: 100%;
+  float: left;
+  margin-right: 20px;
+}
+
+.character-info p {
+  font-size: 20pt;
+  font-family: "Pirata One", serif;
+  word-spacing: 3px;
+  letter-spacing: 1.5px;
+  line-height: 1.2;
+  margin: 5px 0 20px 0;
+}
+
+.with-photo {
+  height: 430px;
+  display: inline-block;
+  margin: 0;
+}
+
+.underneath-photo {
+  margin: 10px 0 20px 0;
+  display: inline-block;
+  font-family: "Special Elite";
+}
+
+.underneath-photo p{
+  padding: 5px 0 15px 0;
+}
+
+.character-info h4 {
+  font-size: 20pt;
+  word-spacing: 4;
+  margin-bottom: 0;
+  background: linear-gradient(to top, violet, gray, lightgray);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  border-bottom: 2px solid rgba(250, 238, 253, 0.555);
+}
+
+.character-info .indent{
+  text-indent: 50px;
+  font-family: "Special Elite";
+  font-size: 16pt;
+  letter-spacing: 1;
+  word-spacing: 4;
+  margin: 0;
+  color: rgba(250, 238, 253, 0.555);
+}
+
+.character-info a {
+  color: brown;
+  font-size: 14pt;
+}
 
 /*_______________________________________
 ***********
