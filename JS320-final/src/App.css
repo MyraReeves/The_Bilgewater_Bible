@@ -405,12 +405,21 @@ main h1, .subheading {
   font-family: "Special Elite";
 }
 
+.character-list :hover {
+  cursor: pointer;
+}
+
+.hover-border :hover {
+  box-shadow: 2px 2px 20px 0.5px rgba(255, 166, 0, 0.557);
+  transform: scale(1.02);
+}
+
 .character-list img {
   border: solid rgb(255, 77, 0) 1px;
   height: 350px;
   width: 220px;
   object-fit: cover;
-  margin-top: 0;
+  margin-top: 2px;
 }
 
 
