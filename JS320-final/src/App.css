@@ -154,6 +154,10 @@ main h1, .subheading {
   color: transparent;
 }
 
+.center-in-space {
+  text-align: center;
+}
+
 .trailers {
   border: 4px dotted brown;
   margin: 0 0 100px 30px;
@@ -236,7 +240,20 @@ main h1, .subheading {
 
 .opening-titles {
   text-align: center;
-  margin-top: 350px;
+  margin-top: 200px;
+  font-family: "Pirata One", serif;
+  color: brown;
+}
+
+.opening-titles h2 {
+  font-size: 40pt;
+  text-decoration: underline;
+  margin: 0;
+}
+
+.opening-titles h3 {
+  margin: 0 0 20px 0;
+  font-size: 16pt;
 }
 
 
