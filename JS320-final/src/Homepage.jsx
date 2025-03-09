@@ -16,40 +16,42 @@ function Homepage() {
 
             <EpisodeList/>
             
-            <div className='trailers'>
-                <p className='homepagePreviews'>Season 1</p>
-                <p className='release-dates'>
-                    Episodes: I - VIII<br/>
-                    Released from January-March 2014
-                </p>
-                <iframe width="660" height="315" src="https://www.youtube.com/embed/rT2Y5jjBNpQ?rel=0" frameBorder="0" allowFullScreen title="The first season's official preview trailer. This video is hosted on YouTube" />
-            </div>
+            <div className='center-in-space'>
+                <div className='trailers'>
+                    <p className='homepagePreviews'>Season 1</p>
+                    <p className='release-dates'>
+                        Episodes: I - VIII<br/>
+                        Released from January-March 2014
+                    </p>
+                    <iframe width="660" height="315" src="https://www.youtube.com/embed/rT2Y5jjBNpQ?rel=0" frameBorder="0" allowFullScreen title="The first season's official preview trailer. This video is hosted on YouTube" />
+                </div>
 
-            <div className='trailers'>
-                <p className='homepagePreviews'>Season 2</p>
-                <p className='release-dates'>
-                    Episodes: IX - XVIII <br/>
-                    Released from January-March 2015
-                </p>
-                <iframe width="660" height="315" src="https://www.youtube.com/embed/OvaXhRq8VB4?rel=0" frameBorder="0" allowFullScreen title="The second season's official preview trailer. This video is hosted on YouTube" />
-            </div>
+                <div className='trailers'>
+                    <p className='homepagePreviews'>Season 2</p>
+                    <p className='release-dates'>
+                        Episodes: IX - XVIII <br/>
+                        Released from January-March 2015
+                    </p>
+                    <iframe width="660" height="315" src="https://www.youtube.com/embed/OvaXhRq8VB4?rel=0" frameBorder="0" allowFullScreen title="The second season's official preview trailer. This video is hosted on YouTube" />
+                </div>
 
-            <div className='trailers'>
-                <p className='homepagePreviews'>Season 3</p>
-                <p className='release-dates'>
-                    Episodes: XIX - XXVIII <br/>
-                    Released from January-March 2016
-                </p>
-                <iframe width="660" height="315" src="https://www.youtube.com/embed/Uq61obO9lww?rel=0" frameBorder="0" allowFullScreen title="The third season's official preview trailer. This video is hosted on YouTube" />
-            </div>
+                <div className='trailers'>
+                    <p className='homepagePreviews'>Season 3</p>
+                    <p className='release-dates'>
+                        Episodes: XIX - XXVIII <br/>
+                        Released from January-March 2016
+                    </p>
+                    <iframe width="660" height="315" src="https://www.youtube.com/embed/Uq61obO9lww?rel=0" frameBorder="0" allowFullScreen title="The third season's official preview trailer. This video is hosted on YouTube" />
+                </div>
 
-            <div className='trailers'>
-                <p className='homepagePreviews'>Season 4</p>
-                <p className='release-dates'>
-                    Episodes: XXIX - XXXVIII <br/>
-                    Released from January-April 2017
-                </p>
-                <iframe width="660" height="315" src="https://www.youtube.com/embed/gyJW2Xrf6EI?rel=0" frameBorder="0" allowFullScreen title="The first season's official preview trailer. This video is hosted on YouTube" />
+                <div className='trailers'>
+                    <p className='homepagePreviews'>Season 4</p>
+                    <p className='release-dates'>
+                        Episodes: XXIX - XXXVIII <br/>
+                        Released from January-April 2017
+                    </p>
+                    <iframe width="660" height="315" src="https://www.youtube.com/embed/gyJW2Xrf6EI?rel=0" frameBorder="0" allowFullScreen title="The first season's official preview trailer. This video is hosted on YouTube" />
+                </div>
             </div>
 
             <p className='watch-on'>Watch all 4 seasons on: <br/>   
@@ -60,6 +62,8 @@ function Homepage() {
             </p>
 
             <div className='opening-titles'>
+                <h2>Emmy-nominated Opening Titles:</h2>
+                <h3>Musical performance &nbsp; and &nbsp; tv version with computer-generated art</h3>
                 <div>
                     <iframe width="660" height="365" src="https://www.youtube.com/embed/PBmzzrU3gR8?rel=0" allowFullScreen title="A video of the musicians playing the opening credits theme song. This video is hosted on YouTube" />
                 </div>
