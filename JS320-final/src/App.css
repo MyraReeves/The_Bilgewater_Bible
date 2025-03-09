@@ -375,6 +375,11 @@ main h1, .subheading {
   display: inline-block;
 }
 
+.cast-list {
+  width: 260px;
+  margin: 40px 15px;
+}
+
 .cast-list p {
   margin: 0;
   font-family: "Special Elite";
