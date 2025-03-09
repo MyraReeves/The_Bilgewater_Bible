@@ -47,7 +47,9 @@ function CharacterList() {
                 {arrayOfcharacters.map ( (eachCharacter) => {
                     return <div key={eachCharacter.id} className="character-list" onClick={() => navigate(eachCharacter.id)}>
                         <h2> {eachCharacter.data().indexName} </h2>
-                        <img src = {eachCharacter.data().image} alt = {eachCharacter.data().altText} />
+                        <div className="hover-border">
+                            <img src = {eachCharacter.data().image} alt = {eachCharacter.data().altText}/>
+                        </div>
                     </div>
                 })}
             </div>
