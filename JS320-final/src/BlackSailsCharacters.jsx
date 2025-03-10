@@ -43,9 +43,37 @@ function BlackSailsCharacters({characterID}) {
   // Pirates should return slightly different, longer text than other characters.  If !pirate return
   // "{name} is a fictitious character created for the show. {Pronoun} is {height} {nationality} {gender} with {hair} hair and {eyes} eyes."
   if (!character.pirate){
-    return <div className="loading" style={{backgroundColor: "black"}}><p><br/><br/><br/>🔨 ⚙️ 🪚 ⚙️ 🔧 <br/><br/>🚧 Page under construction 🚧<br/><br/>🏗️</p></div>
+    return <div className="with-photo">
+      <img src={character.image} alt={character.altText}/>
+      <h1 className="underline">{character.name}</h1>
+      <p>{character.name} is a fictitious character created for the tv show. {character.pronoun} is a {character.height} tall {character.nationality} {character.gender} with {character.hair} hair and {character.eyes} eyes.</p>
+    </div>
   }
 
+  // The one exception would be Woodes Rogers, who was neither ficitious nor a pirate on the show:
+  if (character.firstName == 'Woodes'){
+    return     <div>
+    <div className="with-photo">
+      <img src={character.image} alt={character.altText}/>
+      <h1 className="underline">{character.name}</h1>
+      <p> 
+        {character.name} is a {character.height} tall {character.nationality} {character.gender} with {character.hair} hair and {character.eyes} eyes from {character.city}. 
+      </p>
+      <p>
+        {character.firstName} is... {character.inOtherSources[0]} 
+      </p>
+      <p> {character.additionalInfo} </p>
+    </div>
+    <div className="underneath-photo">
+      <h4><span className="underline">{character.realOrFiction}</span>:</h4>
+      <p className="indent"> {character.inOtherSources[0]} </p>
+      <p className="indent"> {character.inOtherSources[1]} </p>
+      <p className="indent"> {character.inOtherSources[2]} </p>
+    </div>
+  </div>
+  }
+
+  
   return (
     <div>
       <div className="with-photo">
