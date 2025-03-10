@@ -1,3 +1,5 @@
-# Black Sails Fansite
+# The Bilgewater Bible, A Black Sails Fansite
 
 Final project for UW's JavaScript 320 course
+
+"Black Sails" is a loosely historical, action-adventure television series set in the Caribbean (and some scenes in England) a few decades before the U.S. fought for independence from Britain, featuring a mix of fictional pirates from the novel "Treasure Island" and real life historical figures (mostly pirates). The show serves as an adult-level (nudity, violence, gore) prequel to "Treasure Island" and tells a complete story of richly complicated characters (especially Captain Flint and Long John Silver) across four television seasons. Despite featuring movie-quality costumes/sets, starring some award-winning actors, receiving favorable reviews from both critics and audiences, and winning awards for both visual effects and music/sound editing, popular knowledge about the show remains weak, possibly due to it having originally aired during the height of "Game of Thrones" popularity on a less popular channel (Starz).
