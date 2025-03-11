@@ -47,31 +47,28 @@ function BlackSailsCharacters({characterID}) {
       <img src={character.image} alt={character.altText}/>
       <h1 className="underline">{character.name}</h1>
       <p>{character.name} is a fictitious character created for the tv show. {character.pronoun} is a {character.height} tall {character.nationality} {character.gender} {character.city}. {character.pronoun} has {character.hair} hair and {character.eyes} eyes.</p>
-      <p> {character.additionalInfo} </p>
+      <p> {character.additionalInfo} </p><br/><br/>
     </div>
   }
 
   // The one exception would be Woodes Rogers, who was neither ficitious nor a pirate on the show:
   if (character.firstName == 'Woodes'){
-    return     <div>
-    <div className="with-photo">
-      <img src={character.image} alt={character.altText}/>
-      <h1 className="underline">{character.name}</h1>
-      <p> 
-        {character.name} is a {character.height} tall {character.nationality} {character.gender} with {character.hair} hair and {character.eyes} eyes from {character.city}. 
-      </p>
-      <p>
-      {character.firstName} is... {character.inOtherSources[0]} 
-      </p>
-      <p> {character.additionalInfo} </p>
+    return <div>
+      <div className="with-photo">
+        <img src={character.image} alt={character.altText}/>
+        <h1 className="underline">{character.name}</h1>
+        <p> 
+          {character.name} is a {character.height} tall {character.nationality} {character.gender} with {character.hair} hair and {character.eyes} eyes from {character.city}. 
+        </p>
+        <p> {character.additionalInfo} </p><br/>
+      </div>
+      <div className="underneath-photo">
+        <h4><span className="underline">{character.realOrFiction}</span>:</h4>
+        <p className="indent"> {character.inOtherSources[0]} </p>
+        <p className="indent"> {character.inOtherSources[1]} </p>
+        <p className="indent"> {character.inOtherSources[2]} </p>
+      </div>
     </div>
-    <div className="underneath-photo">
-      <h4><span className="underline">{character.realOrFiction}</span>:</h4>
-      <p className="indent"> {character.inOtherSources[0]} </p>
-      <p className="indent"> {character.inOtherSources[1]} </p>
-      <p className="indent"> {character.inOtherSources[2]} </p>
-    </div>
-  </div>
   }
 
 
