@@ -111,6 +111,7 @@ main h1, .subheading {
 
 .loading {
   font-size: 30pt;
+  background-color: black;
 }
 
 .LOC-download {
@@ -161,7 +162,7 @@ main h1, .subheading {
 
 .trailers {
   border: 4px dotted brown;
-  margin: 0 0 100px 30px;
+  margin: 0 0 90px 30px;
   text-align: center;
   padding: 15px 10px 20px 10px;
   width: 800px;
@@ -236,12 +237,13 @@ main h1, .subheading {
   text-align: center;
   font-family: "Caveat", serif;
   font-size: 22pt;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
+  margin-top: 150px;
 }
 
 .opening-titles {
   text-align: center;
-  margin-top: 200px;
+  margin-top: 150px;
   font-family: "Pirata One", serif;
   color: brown;
 }
@@ -249,12 +251,18 @@ main h1, .subheading {
 .opening-titles h2 {
   font-size: 40pt;
   text-decoration: underline;
-  margin: 0;
+  margin: 0 0 10px 0;
+  background: linear-gradient( to top, rgb(236, 104, 104), brown, black, brown, rgb(46, 30, 30), rgb(236, 104, 104), rgb(93, 24, 24), rgb(236, 104, 104), rgb(46, 30, 30), brown, black, brown, black, rgb(236, 104, 104), brown 50%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .opening-titles h3 {
   margin: 0 0 20px 0;
   font-size: 16pt;
+  margin-bottom: -1px;
+  color: rgb(138, 38, 38);
 }
 
 
