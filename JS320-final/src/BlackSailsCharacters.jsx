@@ -46,7 +46,8 @@ function BlackSailsCharacters({characterID}) {
     return <div className="with-photo">
       <img src={character.image} alt={character.altText}/>
       <h1 className="underline">{character.name}</h1>
-      <p>{character.name} is a fictitious character created for the tv show. {character.pronoun} is a {character.height} tall {character.nationality} {character.gender} with {character.hair} hair and {character.eyes} eyes.</p>
+      <p>{character.name} is a fictitious character created for the tv show. {character.pronoun} is a {character.height} tall {character.nationality} {character.gender} {character.city}. {character.pronoun} has {character.hair} hair and {character.eyes} eyes.</p>
+      <p> {character.additionalInfo} </p>
     </div>
   }
 
@@ -60,7 +61,7 @@ function BlackSailsCharacters({characterID}) {
         {character.name} is a {character.height} tall {character.nationality} {character.gender} with {character.hair} hair and {character.eyes} eyes from {character.city}. 
       </p>
       <p>
-        {character.firstName} is... {character.inOtherSources[0]} 
+      {character.firstName} is... {character.inOtherSources[0]} 
       </p>
       <p> {character.additionalInfo} </p>
     </div>
@@ -73,7 +74,7 @@ function BlackSailsCharacters({characterID}) {
   </div>
   }
 
-  
+
   return (
     <div>
       <div className="with-photo">
