@@ -63,12 +63,13 @@ function Homepage() {
 
             <div className='opening-titles'>
                 <h2>Emmy-nominated Opening Titles:</h2>
-                <h3>Musical performance &nbsp; and &nbsp; tv version with computer-generated art</h3>
+                <h3>Composer/musicians performance</h3>
                 <div>
                     <iframe width="660" height="365" src="https://www.youtube.com/embed/PBmzzrU3gR8?rel=0" allowFullScreen title="A video of the musicians playing the opening credits theme song. This video is hosted on YouTube" />
                 </div>
 
                 <div style={{marginTop: "50px"}}>
+                    <h3>Televised version with computer-generated art</h3>
                     <iframe width="660" height="365" src="https://www.youtube.com/embed/XFTcA4QLHw0?rel=0" frameBorder="0" allowFullScreen title="The show's opening credits. This video is hosted on YouTube" />
                 </div>
            </div>
