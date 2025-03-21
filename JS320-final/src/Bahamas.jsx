@@ -45,7 +45,7 @@ function BahamasInfo() {
   return (
     <div>
         {arrayOfBahamasFacts.map( (eachFact) => (
-            <div key = {eachFact.id} className="Bahamas-facts">
+            <div key = {eachFact.cioc} className="Bahamas-facts">
                 <h2> {eachFact.name.official} </h2>
                 <img src = {eachFact.flags.png} alt = {eachFact.flags.alt} className="flag"/> &emsp; &emsp; <img src = {eachFact.coatOfArms.png} alt = 'The Bahamian coat of arms consists of a marlin and flamingo supporting a shield on which there is a ship sailing underneath the sun. Above the shield is a conch shell, and beneath the shield is the national motto.' className="flag"/> <br/>
                 <table>
