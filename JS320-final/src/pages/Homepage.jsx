@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
-import EpisodeList from './EpisodeAPI';
-import AmazonLogo from './images/amazon.jpg';
-import NetflixLogo from './images/netflix.png';
-import AppleTvLogo from './images/AppleTv.png';
-import StarzLogo from './images/starz.png';
+import EpisodeList from '../page_components/EpisodeAPI';
+import AmazonLogo from '../images/amazon.jpg';
+import NetflixLogo from '../images/netflix.png';
+import AppleTvLogo from '../images/AppleTv.png';
+import StarzLogo from '../images/starz.png';
 
 function Homepage() {
     

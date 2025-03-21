@@ -1,5 +1,5 @@
-import skull from "./images/skull_mini.jpg"
-import ships from "./images/PageNotFound_ships.jpg"
+import skull from "../images/skull_mini.jpg"
+import ships from "../images/PageNotFound_ships.jpg"
 
 
 const PageNotFound = () => {

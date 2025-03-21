@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { Link } from 'react-router-dom'
-import Ratings from "./Ratings";
+import Ratings from "../page_components/Ratings";
 
 function Stats() {
     const [object, setObject] = useState(null);

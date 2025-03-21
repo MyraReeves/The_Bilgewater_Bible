@@ -1,7 +1,7 @@
-// This file uses the characters ("pirate-info") collection database inside my Firebase app to display information about each requested character's information onto the screen (via an id prop that is passed in).
+// This file uses the characters ("characters") collection database inside my Firebase app to display information about each requested character's information onto the screen (via an id prop that is passed in).
 import PropTypes from "prop-types"
 import { useEffect, useState } from "react"
-import database from './db';
+import database from '../db';
 import { doc, getDoc } from "firebase/firestore";
 
 function BlackSailsCharacters({characterID}) {

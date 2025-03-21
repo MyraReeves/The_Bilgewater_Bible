@@ -1,7 +1,7 @@
 // This file uses the REST Countries API to generate basic information about the Bahamas.
 
 import { useEffect, useState } from "react";
-import NassauMap from './images/Bahamas.jpg';
+import NassauMap from '../images/Bahamas.jpg';
 
 
 function BahamasInfo() {

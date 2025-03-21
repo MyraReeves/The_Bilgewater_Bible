@@ -34,7 +34,7 @@ function LibraryOfCongressAPI({referenceURL}) {
         return <div><p className="error">⛔ An error occurred while fetching the information.  Sorry! ⛔ <br/><br/><br/>The Library of Congress server is prone to crashing due to traffic overload and recent U.S. government cuts. <br/> Please wait a moment and try again.<br/><span className="LOC-download"><br/>If the problem persists, a PDF version of the text can be downloaded directly from the <a href="https://www.loc.gov/" target="_blank" rel="noopener noreferrer">Library of Congress website.</a></span></p></div>;
     }
     if (loading) {
-        return <div><p className="loading">Loading... <br/><span className="LOC-loading">The Library of Congress API server moves slowly sometimes. Thank you for your patience.<br/><br/>If an error message appears after this loading screen, please refresh your browser and try again. Their API <strong><em>is</em></strong> CORS-compliant!</span></p></div>
+        return <div><p className="loading">Loading... <br/><span className="LOC-loading">The Library of Congress API server moves slowly sometimes. Thank you for your patience.<br/><br/>If an error message appears after this loading screen, please refresh your browser and try again.</span></p></div>
     }
     if (historicalDocument === null) {
         return <div className="loading">The API failed to return any data. <br/> Please try again later</div>;

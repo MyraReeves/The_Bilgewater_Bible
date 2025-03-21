@@ -1,10 +1,10 @@
 // This file displays onto the screen the LearningDropdown file's menu of options followed by the results of whichever option the user selects.
 
 import { useState } from "react"
-import ships from './images/ships1.jpg'
-import LearningDropdownMenu from "./LearningDropdown"
-import BahamasInfo from "./Bahamas"
-import LibraryOfCongressAPI from "./LOC"
+import ships from '../images/ships1.jpg'
+import LearningDropdownMenu from "../page_components/LearningDropdown"
+import BahamasInfo from "../page_components/Bahamas"
+import LibraryOfCongressAPI from "../page_components/LOC"
 
 function LearnMore() {
     const [selection, setSelection] = useState('')
