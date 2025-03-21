@@ -1,13 +1,13 @@
 import { Routes, Route } from 'react-router-dom';
 
-import Homepage from './Homepage';
-import CastAPI from './CastAPI';
-import CharacterIndex from './CharacterList';
-import Stats from './Stats';
-import Podcast from './Podcast';
-import LearnMore from './LearnMore';
-import PageNotFound from './PageNotFound';
-import CharacterInfo from './CharacterInfo';
+import Homepage from './pages/Homepage';
+import CastAPI from './pages/CastAPI';
+import CharacterIndex from './pages/CharacterList';
+import Stats from './pages/Stats';
+import Podcast from './pages/Podcast';
+import LearnMore from './pages/LearnMore';
+import PageNotFound from './pages/PageNotFound';
+import CharacterInfo from './pages/CharacterInfo';
 
 function RoutePaths() {
 
