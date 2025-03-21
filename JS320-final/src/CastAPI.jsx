@@ -66,8 +66,8 @@ function CastAPI() {
         <h1>🕱 <span className="underline">Cast Members</span> 🕱</h1>
         <div className="subheading">(In alphabetical order of their first names)</div>
         <div className="centered">
-            {arrayOfcastMembers.map( (eachCastMember, index) => (
-                <div key={index} className="cast-list">
+            {arrayOfcastMembers.map( (eachCastMember) => (
+                <div key = {eachCastMember.id} className="cast-list">
                     <h2> {eachCastMember.person.name} </h2>
                     <img src = {eachCastMember.person.image.medium} alt = 'Photo of the actor'/>
                     <p> Nationality: &nbsp; <span className="info"> {eachCastMember.person.country.name} </span> </p>
