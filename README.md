@@ -27,12 +27,20 @@ To further expand on fulfilling that expressed desire audiences have for learnin
 
 When asked to elaborate on what they wished was available on more fansites, some television aficionados also specified that they wished to learn more about the mindset/intentions of producers, script writers, and actors in their favorite shows. To fulfill that goal for fans of "Black Sails," my app provides easy access to listen to interviews of the cast and crew that were conducted on the "Fathoms Deep" podcast.
 
-## APIs & Other Dependencies
+## 🏴‍☠️ APIs & Other Dependencies
 
-* [TVMaze API](https://www.tvmaze.com/api)
-* [REST Countries](https://restcountries.com/)
-* [Library of Congress API](https://www.loc.gov/apis/)
 * [Elfsight](https://elfsight.com/)
 * [Firebase](https://firebase.google.com/)
+* [Library of Congress API](https://www.loc.gov/apis/)
+* [REST Countries](https://restcountries.com/)
+* [TVMaze API](https://www.tvmaze.com/api)
+* [Vitest](https://vitest.dev/)
 
-The free embeddable podcast player widget from [Elfsight](https://elfsight.com/) was easy to set up and integrate. Likewise, the [TVMaze](https://www.tvmaze.com/api) and [REST Countries](https://restcountries.com/) APIs were also very easy to use and understand.  The only minor issue I ran into was TVMaze's inclusion of HTML tags inside of value strings (the HTML tags showed on the screen as string characters).
+The free embeddable podcast player widget from [Elfsight](https://elfsight.com/) was easy to set up and integrate. Likewise, the [TVMaze](https://www.tvmaze.com/api) and [REST Countries](https://restcountries.com/) APIs were also very easy to use and understand.  The only minor issue I ran into was TVMaze's inclusion of HTML tags inside of value strings (their HTML tags appeared on the screen as string characters). The instructions for how to use the [Library of Congress API](https://www.loc.gov/apis/) were much more complicated than the others, despite there being several pages on their website about the topic.  Additionally, the frequency with which the entire Library of Congress website crashes throughout the day due to server traffic overload is very unfortunate.
+
+## _**How to Run Unit Tests:**_
+
+After cloning this repository and navigating to the `Black-Sails-Fansite` app directory, tests can be run in the terminal using the command `npm run test`.
+
+Unit testing for this project was performed using [Vitest](https://vitest.dev/).  All dependencies have already been installed. The coding used inside my test file can be viewed by navigating to `src` > `tests` > `App.test.jsx`.
+
