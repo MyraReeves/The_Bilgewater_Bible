@@ -1,10 +1,6 @@
-# UW JS320 final project
+# 🏴‍☠️ The Bilgewater Bible 🏴‍☠️ — _A Black Sails Fansite_
 
-<h3 style="color:brown; text-align:center; font-size:22pt;"> 🏴‍☠️ The Bilgewater Bible 🏴‍☠️ </h3> 
-
-_<h3 style="color:brown; text-align:center; font-size:16pt;">A Black Sails Fansite</h3>_
-
-## Final Project Requirements
+## UW JS320 Final Project Requirements
 
 * Submit wireframes to help visualize what your project will look like, and a 2 week plan including what steps you plan to accomplish each week.
 * Must be a React application bootstrapped with Vite.
