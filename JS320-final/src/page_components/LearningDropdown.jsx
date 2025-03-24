@@ -26,7 +26,8 @@ function LearningDropdownMenu(props) {
                     <option value="pirateLives">📔1839 book - &#34;Lives and voyages of Drake, Cavendish, and Dampier&#34;</option>
                     <option value="piratesOwn">📕1856 book - &#34;The Pirates Own Book&#34;</option>
                     <option value="ravagedSeas">📗1874 book - &#34;Pirates or Buccaneers Who Ravaged the Seas [...] Two Hundred Years Ago&#34;</option>
-                    <option value="britishPrivateer">📙1894 book - &#34;Life Aboard a British Privateer in the Time of Queen Anne&#34;</option>
+                    <option value="savageLands">📙1891 book - &#34;Heroes of Unknown Seas and Savage Lands&#34;</option>
+                    <option value="britishPrivateer">📘1894 book - &#34;Life Aboard a British Privateer in the Time of Queen Anne&#34;</option>
                     <option value="buccaneersThesis">📓1910 thesis, Board of Modern History, Oxford University - &#34;The Buccaneers in the West Indies in the XVII Century&#34;</option>
                 </optgroup>
                 <option disabled> </option>
