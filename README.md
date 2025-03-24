@@ -1,17 +1,21 @@
 # 🏴‍☠️ The Bilgewater Bible 🏴‍☠️ — _A Black Sails Fansite_
 
-## UW JS320 Final Project Requirements
+This was my final project for the second of three JavaScript courses within earning the _**Full-Stack Development With JavaScript**_ certificate from the University of Washington.
 
-* Submit wireframes to help visualize what your project will look like, and a 2 week plan including what steps you plan to accomplish each week.
-* Must be a React application bootstrapped with Vite.
-* Utilize modern methods of writing JavaScript. No `var` keyword.  Use arrow functions where appropriate and use modern methods such as `.map()`
-* Fetch an external API, whether that is a publicly available API or a database that you have created (for example on Firebase).  Must use the native fetch API; no external libraries for data fetching (like Axios or react-query). EXCEPTION: Can use Firebase SDK if you are using a Firebase App.
-* Use a minimum of two routes, ideally one that takes params to call API data. The app should use React Router.
-* As needed components should be flexible and reusable.
-* All components that take in props must use prop-types.
-* Incorporate at least one unit test. Components reliant on API calls will not need to be unit tested. Must document how to run tests.
-* Incorporate custom CSS into the project.
-* Perform some basic user testing.
+Graded: March 2025
+
+## Project Requirements
+
+> * _Submit wireframes to help visualize what your project will look like, and a 2 week plan including what steps you plan to accomplish each week._
+> * _Must be a React application bootstrapped with Vite._
+> * _Utilize modern methods of writing JavaScript. No `var` keyword.  Use arrow functions where appropriate and use modern methods such as `.map()`_
+> * _Fetch an external API, whether that is a publicly available API or a database that you have created (for example on Firebase).  Must use the native fetch API; no external libraries for data fetching (like Axios or react-query). EXCEPTION: Can use Firebase SDK if you are using a Firebase App._
+> * _Use a minimum of two routes, ideally one that takes params to call API data. The app should use React Router._
+> * _As needed components should be flexible and reusable._
+> * _All components that take in props must use prop-types._
+> * _Incorporate at least one unit test. Components reliant on API calls will not need to be unit tested. Must document how to run tests._
+> * _Incorporate custom CSS into the project._
+> * _Perform some basic user testing._
 
 <br>
 
