@@ -13,6 +13,8 @@
 * Incorporate custom CSS into the project.
 * Perform some basic user testing.
 
+<br>
+
 ## 🏴‍☠️ Project Description
 
 Television shows are a common conversational topic among both friends and strangers. When I asked avid television viewers what they felt is lacking on most tv show fansites, the answers I recieved back all had in common a desire among viewers to learn more about their favorite show. Therefore, my app provides educational services to fans of a specific television show. I chose the television show "Black Sails." When asked using that tv show in specific, the additional detail I recieved from viewers was a desire to learn more about the actual real life history behind the fictitious story.
@@ -27,6 +29,8 @@ To further expand on fulfilling that expressed desire audiences have for learnin
 
 When asked to elaborate on what they wished was available on more fansites, some television aficionados also specified that they wished to learn more about the mindset/intentions of producers, script writers, and actors in their favorite shows. To fulfill that goal for fans of "Black Sails," my app provides easy access to listen to interviews of the cast and crew that were conducted on the "Fathoms Deep" podcast.
 
+<br>
+
 ## 🏴‍☠️ APIs & Other Dependencies
 
 * [Elfsight](https://elfsight.com/)
@@ -37,6 +41,18 @@ When asked to elaborate on what they wished was available on more fansites, some
 * [Vitest](https://vitest.dev/)
 
 The free embeddable podcast player widget from [Elfsight](https://elfsight.com/) was easy to set up and integrate. Likewise, the [TVMaze](https://www.tvmaze.com/api) and [REST Countries](https://restcountries.com/) APIs were also very easy to use and understand.  The only minor issue I ran into was TVMaze's inclusion of HTML tags inside of value strings (their HTML tags appeared on the screen as string characters). The instructions for how to use the [Library of Congress API](https://www.loc.gov/apis/) were much more complicated than the others, despite there being several pages on their website about the topic.  Additionally, the frequency with which the entire Library of Congress website crashes throughout the day due to server traffic overload is very unfortunate.
+
+<br>
+
+## 🏴‍☠️ Future Improvements/Additions
+
+Thankfully, I was able to implement most of the feedback I received during user testing before the project deadline. However, I know that some very minor stylistic layout issues are still occurring on extremely wide monitor screens.  I also definitely need to add CSS rules to handle the small size of mobile device screens.  Special small screen rules weren't a priority for the project (not part of the assignment requirements), but the vast majority of time people spend online nowadays is on mobile devices. During user testing, I kept having to warn users that my app should only be viewed on a desktop sized monitor. So implementing those screen size rules should be a high priority.
+
+During the project proposal phase, one of the features considered for inclusion was an old fashioned vingt-un card game.  Time constraints did not allow it to be developed before the project deadline, but I still think it would be a fun addition. I hope to be able to add the game in the future, most likely using the [Deck of Cards](https://www.deckofcardsapi.com/) API.
+
+I also would like to solve how to add a footer.  For some reason the page formatting failed when I attempted to add a footer component into the App.jsx file.  Despite me placing the `<footer>` HTML tag _after_ the `<main>` tag's content, the browser visually inserted the `footer` content into the middle of the screen directly in the middle of the `<main>` section's content and I don't know why.  Even placing `bottom: 0` instructions into the CSS file for the footer failed to move it to below `<main>`.  Within the time limit bounds of the project, it made more sense for me to simply leave out a footer from the website instead of continuing to problem solve the situation, but it would be nice to solve the footer situation.
+
+<br>
 
 ## _**How to Run Unit Tests:**_
 
