@@ -53,12 +53,17 @@ function LearnMore() {
 
         // 1856 book:   "The Pirates Own Book"
         if (selection == 'piratesOwn'){
-            return <div className="box-shadow"> <LibraryOfCongressAPI referenceURL= 'resource/gdcmassbookdig.piratesownbook00ellm_0/?st=gallery&c=442' /> </div>
+            return <div className="box-shadow"> <LibraryOfCongressAPI referenceURL = 'resource/gdcmassbookdig.piratesownbook00ellm_0/?st=gallery&c=442' /> </div>
         }
 
         // 1874 book:   "Captain William Kidd and others of the pirates or buccaneers who ravaged the seas, the islands, and the continents of America two hundred years ago"
         if (selection == 'ravagedSeas'){
-            return <div className="box-shadow"> <LibraryOfCongressAPI referenceURL= 'resource/gdcmassbookdig.captainwilliamki01abbo/?st=gallery&c=398' /> </div>
+            return <div className="box-shadow"> <LibraryOfCongressAPI referenceURL = 'resource/gdcmassbookdig.captainwilliamki01abbo/?st=gallery&c=398' /> </div>
+        }
+
+        // 1891 book: "Heroes of unknown seas and savage lands"
+        if (selection == 'savageLands'){
+            return <div className="box-shadow"> <LibraryOfCongressAPI referenceURL = 'resource/gdcmassbookdig.heroesofunknowns00buel/?st=gallery&c=562' /></div>
         }
 
         // 1894 book: "Life aboard a British privateer in the time of Queen Anne : being the journal of Captain Woodes Rogers"
