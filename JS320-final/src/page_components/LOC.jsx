@@ -77,7 +77,7 @@ function LibraryOfCongressAPI({referenceURL}) {
                 <div key = {index}>
                     <img
                         src={ imageToResize === index ? eachPage.image_url[2] : eachPage.image_url[0] }
-                        alt="A page of the book"
+                        alt={`Page ${index}`}
                         className={imageToResize === index ? "large-page" : "small-page"}  //Makes the class dynamic
                         onClick={() => handleClick(index)}
                     />
