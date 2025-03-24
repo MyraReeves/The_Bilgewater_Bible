@@ -31,6 +31,11 @@ function LearnMore() {
             return <div className="box-shadow"> <LibraryOfCongressAPI referenceURL = 'resource/rbc0001.2019gen63650/?st=gallery&c=40'/> </div>
         }
 
+        // 1804 French book: "Histoire des Flibustiers"
+        if (selection == 'histoireFlibustiers'){
+            return <div className="box-shadow"> <LibraryOfCongressAPI referenceURL='resource/gdcmassbookdig.histoiredesflibu00arch_0/?st=gallery&c=386' /> </div>
+        }
+
         // 1725 book: "The history and lives of all the most notorious pirates, and their crews, from Capt. Avery, who first settled at Madagascar, to Capt. John Gow, and James Williams, his Lieutenant, Etc. who were hang'd at Execution Dock, June 11, 1725, for Piracy and Murther, and afterwards hang'd in Chains between Blackwall and Deptford"
         if (selection == 'notoriousPirates'){
             return <div className="box-shadow"> <LibraryOfCongressAPI referenceURL = 'resource/rbc0001.2019gen31667/?st=gallery&c=180'/> </div>
@@ -69,6 +74,11 @@ function LearnMore() {
         // 1894 book: "Life aboard a British privateer in the time of Queen Anne : being the journal of Captain Woodes Rogers"
         if (selection == 'britishPrivateer'){
             return <div className="box-shadow"> <LibraryOfCongressAPI referenceURL='resource/gdcscd.00413141047/?st=gallery&c=178' /></div>
+        }
+
+        // 1907 book: "Stolen Treasure"
+        if (selection == 'stolenTreasure'){
+            return <div className="box-shadow"> <LibraryOfCongressAPI referenceURL='resource/gdcmassbookdig.stolentreasure00pyle/?st=gallery&c=284' /></div>
         }
 
         // 1910 thesis presented to the Board of Modern History of Oxford University: "The Buccaneers in the West Indies in the XVII century"
