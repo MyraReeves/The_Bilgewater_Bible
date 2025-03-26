@@ -12,7 +12,7 @@ function BlackSailsCharacters({characterID}) {
   useEffect( () => {
     const getData = async () => {
       try {
-        const docRef = doc(database, "pirate-info", characterID);
+        const docRef = doc(database, "characters", characterID);
         const docSnap = await getDoc(docRef);
 
         if (docSnap.exists()) {
