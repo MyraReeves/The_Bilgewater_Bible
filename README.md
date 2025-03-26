@@ -2,7 +2,7 @@
 
 ### [🧭 Click here](https://bilgewater-bible.web.app/) to visit the website.
 
-This was my final project for the second of three JavaScript courses within earning the _**Full-Stack Development With JavaScript**_ certificate from the University of Washington.
+This was my final project for the second course within earning the _**Full-Stack Development With JavaScript**_ certificate from the University of Washington.
 
 Graded: March 2025
 
@@ -68,7 +68,7 @@ Unit testing for this project was performed using [Vitest](https://vitest.dev/).
 
 <br>
 
-## ⛵ Thanks to:
+## ⛵ Special Thanks to:
 
 * Chris "Badger" Mackie
 * Heather Jarvi
