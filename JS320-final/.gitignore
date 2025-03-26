@@ -13,8 +13,9 @@ dist
 dist-ssr
 *.local
 .env
-Ratings.txt
+*Ratings.txt
 FirebaseInitializationInstructions.js
+*characters.json
 
 # Editor directories and files
 .vscode/*
