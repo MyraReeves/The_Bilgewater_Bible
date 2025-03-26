@@ -1,10 +1,10 @@
 # 🏴‍☠️ The Bilgewater Bible 🏴‍☠️ — _A Black Sails Fansite_
 
+### [🧭 Click here](https://bilgewater-bible.web.app/) to visit the website.
+
 This was my final project for the second of three JavaScript courses within earning the _**Full-Stack Development With JavaScript**_ certificate from the University of Washington.
 
 Graded: March 2025
-
-### [💀 Click here](https://bilgewater-bible.web.app/) to visit the website.
 
 ## Project Requirements
 
@@ -66,3 +66,11 @@ After cloning this repository and navigating to the `Black-Sails-Fansite` app di
 
 Unit testing for this project was performed using [Vitest](https://vitest.dev/).  All dependencies have already been installed. The coding used inside my test file can be viewed by navigating to `src` > `tests` > `App.test.jsx`.
 
+<br>
+
+## ⛵ Thanks to:
+
+* Chris "Badger" Mackie
+* Heather Jarvi
+* James Norton
+* Jordan Mollot
