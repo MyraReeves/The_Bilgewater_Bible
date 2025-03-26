@@ -4,6 +4,8 @@ This was my final project for the second of three JavaScript courses within earn
 
 Graded: March 2025
 
+### [💀 Click here](https://bilgewater-bible.web.app/) to visit the website.
+
 ## Project Requirements
 
 > * _Submit wireframes to help visualize what your project will look like, and a 2 week plan including what steps you plan to accomplish each week._
