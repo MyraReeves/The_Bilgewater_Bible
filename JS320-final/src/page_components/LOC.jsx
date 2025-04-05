@@ -62,7 +62,23 @@ function LibraryOfCongressAPI({referenceURL}) {
     // Function to toggle between an enlarged versus a small image of the book's page
     const handleClick = (index) => {
         setImageToResize((previous) => (previous === index ? null : index));
-      };
+    };
+
+
+    // Special instructions for displaying the 1700s map of New Providence Island
+    if (referenceURL == 'resource/g4982n.ar175100/?st=image'){
+        return <>
+            <p>Courtesy of the <a href={historicalDocument.item.aka[1]} target="_blank" rel="noopener noreferrer">U.S. Library of Congress</a></p>
+            <h3>Click the image for a version that will allow you to zoom in further</h3>
+            <a href='https://tile.loc.gov/image-services/iiif/service:gmd:gmd4:g4982:g4982n:ar175100/full/pct:25/0/default.jpg#h=2056&w=4252' target="_blank" rel="noopener noreferrer">
+                <img
+                    src={ historicalDocument.item.image_url[2] }
+                    alt={`A map of New Providence Island that was hand drawn some time during the 1700s`}
+                    className="NewProvidenceMap"
+                />
+            </a>
+        </>
+    }
 
 
   return (
