@@ -35,6 +35,7 @@ function LearningDropdownMenu(props) {
                 <option disabled> </option>
                 <optgroup label="Additional Resources:">
                     <option value="bahamas">🌎 Learn more about the Bahamas</option>
+                    <option value="1700sMap">🖼️ Map of New Providence Island from the 1700s</option>
                     <option value="treasureIsland">📖 Young Adult Fiction - Original 1883 edition of &#34;Treasure Island&#34;</option>
                 </optgroup>
         </select>
